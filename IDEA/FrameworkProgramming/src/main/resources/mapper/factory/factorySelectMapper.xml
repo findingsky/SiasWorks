@@ -4,7 +4,7 @@
     <select id="selectFactory" resultMap="FactoryResultMap">
         SELECT *
         FROM factory
-        where fID = #{id};
+        where fID = #{fID};
     </select>
 
 </mapper>

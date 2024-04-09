@@ -3,6 +3,8 @@
 <mapper namespace="factoryMapper">
 
     <delete id="delete">
-        delete from factory where fID=#{fID};
+        delete
+        from factory
+        where fID = #{fID};
     </delete>
 </mapper>
