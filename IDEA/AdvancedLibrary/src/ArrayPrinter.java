@@ -11,7 +11,6 @@ public class ArrayPrinter
         printArrays(intArray);
         printArrays(floatArray);
         printArrays(doubleArray);
-        System.out.println("All arrays have been printed.");
     }
 
     public static void printArrays(Object array)
