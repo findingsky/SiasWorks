@@ -3,7 +3,7 @@ package members;
 public class factory
 {
     // 定义工厂ID
-    private char[] fid = new char[11];
+    private char[] fId = new char[11];
     // 定义工厂名称
     private String fName;
     // 定义工厂地址
@@ -12,9 +12,9 @@ public class factory
     private char[] fTrl = new char[11];
 
     // 获取工厂ID
-    public char[] getFid()
+    public char[] getFId()
     {
-        return fid;
+        return fId;
     }
 
     // 获取工厂名称
@@ -36,9 +36,9 @@ public class factory
     }
 
     // 设置工厂ID
-    public void setFid(char[] fid)
+    public void setFId(char[] fId)
     {
-        this.fid = fid;
+        this.fId = fId;
     }
 
     // 设置工厂名称
@@ -64,6 +64,6 @@ public class factory
     public String toString()
     {
 
-        return "Factory ID: " + fid + "\nFactory Name: " + fName + "\nFactory Address: " + fAddress + "\nFactory Trade License: " + fTrl;
+        return "Factory ID: " + fId + "\nFactory Name: " + fName + "\nFactory Address: " + fAddress + "\nFactory Trade License: " + fTrl;
     }
 }

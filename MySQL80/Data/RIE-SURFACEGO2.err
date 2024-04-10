@@ -421,3 +421,48 @@
 2024-04-09T10:29:57.587837Z 0 [System] [MY-010931] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: ready for connections. Version: '8.0.34'  socket: ''  port: 3306  MySQL Community Server - GPL.
 2024-04-09T10:35:00.144691Z 0 [System] [MY-013105] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Normal shutdown.
 2024-04-09T10:35:01.419751Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.34)  MySQL Community Server - GPL.
+2024-04-10T01:58:41.973391Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.34) starting as process 19140
+2024-04-10T01:58:42.133220Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-04-10T01:58:50.323519Z 1 [ERROR] [MY-013171] [InnoDB] Cannot boot server version 80034 on data directory built by version 80036. Downgrade is not supported
+mysqld: Can't open file: 'mysql.ibd' (errno: 0 - )
+2024-04-10T01:58:50.610143Z 1 [ERROR] [MY-010334] [Server] Failed to initialize DD Storage Engine
+2024-04-10T01:58:50.615869Z 0 [ERROR] [MY-010020] [Server] Data Dictionary initialization failed.
+2024-04-10T01:58:50.617330Z 0 [ERROR] [MY-010119] [Server] Aborting
+2024-04-10T01:58:50.634026Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.34)  MySQL Community Server - GPL.
+2024-04-10T01:59:31.820608Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.34) starting as process 6684
+2024-04-10T01:59:31.874060Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-04-10T01:59:38.184115Z 1 [ERROR] [MY-013171] [InnoDB] Cannot boot server version 80034 on data directory built by version 80036. Downgrade is not supported
+mysqld: Can't open file: 'mysql.ibd' (errno: 0 - )
+2024-04-10T01:59:38.492248Z 1 [ERROR] [MY-010334] [Server] Failed to initialize DD Storage Engine
+2024-04-10T01:59:38.494613Z 0 [ERROR] [MY-010020] [Server] Data Dictionary initialization failed.
+2024-04-10T01:59:38.495840Z 0 [ERROR] [MY-010119] [Server] Aborting
+2024-04-10T01:59:38.497677Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.34)  MySQL Community Server - GPL.
+2024-04-10T01:59:39.378872Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.34) starting as process 15820
+2024-04-10T01:59:39.416964Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-04-10T01:59:44.452176Z 1 [ERROR] [MY-013171] [InnoDB] Cannot boot server version 80034 on data directory built by version 80036. Downgrade is not supported
+mysqld: Can't open file: 'mysql.ibd' (errno: 0 - )
+2024-04-10T01:59:44.624545Z 1 [ERROR] [MY-010334] [Server] Failed to initialize DD Storage Engine
+2024-04-10T01:59:44.626543Z 0 [ERROR] [MY-010020] [Server] Data Dictionary initialization failed.
+2024-04-10T01:59:44.627421Z 0 [ERROR] [MY-010119] [Server] Aborting
+2024-04-10T01:59:44.628539Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.34)  MySQL Community Server - GPL.
+2024-04-10T02:04:13.973182Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.34) starting as process 12952
+2024-04-10T02:04:14.096529Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-04-10T02:04:19.467066Z 1 [ERROR] [MY-013171] [InnoDB] Cannot boot server version 80034 on data directory built by version 80036. Downgrade is not supported
+mysqld: Can't open file: 'mysql.ibd' (errno: 0 - )
+2024-04-10T02:04:19.542604Z 1 [ERROR] [MY-010334] [Server] Failed to initialize DD Storage Engine
+2024-04-10T02:04:19.548069Z 0 [ERROR] [MY-010020] [Server] Data Dictionary initialization failed.
+2024-04-10T02:04:19.549772Z 0 [ERROR] [MY-010119] [Server] Aborting
+2024-04-10T02:04:19.563906Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.34)  MySQL Community Server - GPL.
+2024-04-10T02:12:16.145159Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.36) starting as process 2980
+2024-04-10T02:12:16.313061Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-04-10T02:12:22.238286Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-04-10T02:12:22.782593Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 22, name 'eims/client', file '.\eims\client.ibd' is missing!
+2024-04-10T02:12:22.784616Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 23, name 'eims/contact', file '.\eims\contact.ibd' is missing!
+2024-04-10T02:12:22.785763Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 24, name 'eims/cs', file '.\eims\cs.ibd' is missing!
+2024-04-10T02:12:22.786554Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 25, name 'eims/product', file '.\eims\product.ibd' is missing!
+2024-04-10T02:12:22.787393Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 26, name 'eims/staff', file '.\eims\staff.ibd' is missing!
+2024-04-10T02:12:22.788204Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 27, name 'eims/user', file '.\eims\user.ibd' is missing!
+2024-04-10T02:12:23.138515Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2024-04-10T02:12:23.139285Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2024-04-10T02:12:23.364588Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2024-04-10T02:12:23.364853Z 0 [System] [MY-010931] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: ready for connections. Version: '8.0.36'  socket: ''  port: 3306  MySQL Community Server - GPL.

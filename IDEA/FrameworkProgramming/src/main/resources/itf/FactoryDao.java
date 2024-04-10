@@ -4,12 +4,12 @@ import members.factory;
 
 public interface FactoryDao
 {
-    public factory selectAll(String fID);
+    public factory selectFactory(String fID);
 
     public void insertFactory(factory factory);
 
     public void updateFactory(factory factory);
 
-    public void deleteFactory(String fID);
+    public void deleteFactory(String fId);
 }
 
