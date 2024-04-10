@@ -16,6 +16,10 @@
         FROM factory
         where fID = #{fID};
     </select>
+    <select id="selectAllFactory" resultMap="FactoryResultMap">
+        select *
+        from factory;
+    </select>
     <update id="updateFactory">
         update factory
         <trim prefix="set" suffixOverrides=",">

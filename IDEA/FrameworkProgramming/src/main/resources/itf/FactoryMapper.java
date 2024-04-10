@@ -2,9 +2,13 @@ package itf;
 
 import members.factory;
 
+import java.util.List;
+
 public interface FactoryDao
 {
     public factory selectFactory(String fID);
+
+    public List<factory> selectAllFactory();
 
     public int insertFactory(factory factory);
 
