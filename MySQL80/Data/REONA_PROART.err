@@ -1,0 +1,15 @@
+2024-04-09T10:32:45.332993Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.36) starting as process 73508
+2024-04-09T10:32:45.343846Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-04-09T10:32:45.600541Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-04-09T10:32:45.686960Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 22, name 'eims/client', file '.\eims\client.ibd' is missing!
+2024-04-09T10:32:45.687455Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 23, name 'eims/contact', file '.\eims\contact.ibd' is missing!
+2024-04-09T10:32:45.688072Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 24, name 'eims/cs', file '.\eims\cs.ibd' is missing!
+2024-04-09T10:32:45.688545Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 25, name 'eims/product', file '.\eims\product.ibd' is missing!
+2024-04-09T10:32:45.689023Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 26, name 'eims/staff', file '.\eims\staff.ibd' is missing!
+2024-04-09T10:32:45.689456Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 27, name 'eims/user', file '.\eims\user.ibd' is missing!
+2024-04-09T10:32:45.967908Z 4 [System] [MY-013381] [Server] Server upgrade from '80034' to '80036' started.
+2024-04-09T10:32:55.122617Z 4 [System] [MY-013381] [Server] Server upgrade from '80034' to '80036' completed.
+2024-04-09T10:32:55.439463Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2024-04-09T10:32:55.441365Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2024-04-09T10:32:55.483025Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2024-04-09T10:32:55.483140Z 0 [System] [MY-010931] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: ready for connections. Version: '8.0.36'  socket: ''  port: 3306  MySQL Community Server - GPL.
