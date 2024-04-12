@@ -466,3 +466,5 @@ mysqld: Can't open file: 'mysql.ibd' (errno: 0 - )
 2024-04-10T02:12:23.139285Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
 2024-04-10T02:12:23.364588Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
 2024-04-10T02:12:23.364853Z 0 [System] [MY-010931] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: ready for connections. Version: '8.0.36'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2024-04-10T03:19:00.700100Z 0 [System] [MY-013105] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Normal shutdown.
+2024-04-10T03:19:02.170735Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.36)  MySQL Community Server - GPL.
