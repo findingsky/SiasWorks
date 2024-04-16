@@ -1,5 +1,9 @@
 package itf;
 
+import java.util.List;
+
+import pojo.factory;
+import pojo.reagents;
 
 public interface FactoryMapper
 {

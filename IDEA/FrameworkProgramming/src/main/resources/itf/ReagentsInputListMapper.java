@@ -1,5 +1,7 @@
 package itf;
 
+import pojo.ReagentsInputList;
+
 interface ReagentsInputListMapper
 {
     int deleteReagentsInputList(String rlId);
