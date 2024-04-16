@@ -1,6 +1,7 @@
 package itf;
 
 
+
 public class FactoryDaoImpl implements FactoryMapper
 {
     public SqlSession sqlSession;
