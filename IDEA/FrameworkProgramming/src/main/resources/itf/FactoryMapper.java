@@ -4,7 +4,7 @@ import members.factory;
 
 import java.util.List;
 
-public interface FactoryDao
+public interface FactoryMapper
 {
     public factory selectFactory(String fID);
 

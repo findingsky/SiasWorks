@@ -2,7 +2,7 @@ import members.factory;
 
 import java.util.List;
 
-public interface ReagentsDao
+public interface ReagentsMapper
 {
     public int deleteReagent(String rId);
 

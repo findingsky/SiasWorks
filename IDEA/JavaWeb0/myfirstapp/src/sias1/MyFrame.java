@@ -9,12 +9,16 @@ import java.awt.Image;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 public class MyFrame extends JFrame {
 	JLabel labelname;
 	JTextField textname;
 	JLabel labelpassword;
 	JPasswordField password1;
-	JButton button1;
+	JButton button1,button2;
 	JRadioButton rb1,rb2,rb3;
 	ButtonGroup group1;
 	
@@ -42,20 +46,139 @@ public class MyFrame extends JFrame {
 		group1.add(rb2);
 		group1.add(rb3);
 		
-		button1=new JButton("确定");
+		button1=new JButton("登陆");
 		
-		button1.addActionListener(new ActionListener(){
+button1.addActionListener(new ActionListener(){
+			
 			public void actionPerformed(ActionEvent e){
-				System.out.println("you press button");
-				if(textname.getText().trim().equals("abc")&&password1.getText().trim().equals("123")&&rb1.isSelected())
-				{System.out.println("you are right user");
-				MyFrame2 frame2=new MyFrame2();
-				frame2.show();
-				frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				}
+				String name1=textname.getText().trim();
+				String pwd1=password1.getText();
+				String id1="";
+				if(rb1.isSelected())
+					id1="教师";
 				
-			}
-		});
+				if(rb2.isSelected())
+					id1="学生";
+				
+				if(rb3.isSelected())
+					id1="管理员";
+				
+				
+				 //定义数据库联接的驱动程序
+			    String driver = "org.gjt.mm.mysql.Driver";
+			    //定义MySQL数据库的联接地址
+			    String url = "jdbc:mysql://localhost:3306/sias1?user='root';password='root'";
+			    //声明联接类
+			    Connection conn = null;
+			    try{
+			      //使用JDBC技术创建数据库联接
+			      Class.forName(driver);
+			      //使用DriverManager类的getConnection()方法建立联接,第一个字符参数定义用户名,
+			      //第二个字符参数定义密码
+			      conn = DriverManager.getConnection(url, "root", "root");
+			      if(conn != null){
+			        System.out.println("成功联接JDBC数据源.");
+			      }
+			      
+			      String sql1="select * from usertable where username='"+name1+"'";
+			      System.out.println(sql1);
+			      Statement stmt=conn.createStatement();
+			      ResultSet rs=stmt.executeQuery(sql1);
+			     
+			      if(rs.next())
+			      {String name2=rs.getString(1);
+			      String pwd2=rs.getString("pwd");
+			      String id2=rs.getString(3);
+			      if(pwd2.equals(pwd1)&&id2.equals(id1))
+			      	{System.out.println("you are right user");
+			      		MyFrame2 frame2=new MyFrame2();
+			      		frame2.show();
+			      		frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			      	}
+			      else
+			      {
+			    	  System.out.println("you are error user,or not have the user");
+			      }
+			      }
+			      else
+			      {
+			    	  System.out.println("you are error user.or not have the user");
+			      }
+			    	 
+			       
+			    }catch(Exception ex){
+			      ex.printStackTrace();
+			    }
+			    try{
+			      //关闭数据库联接类
+			      conn.close();
+			    }catch(Exception ex){
+			      ex.printStackTrace();
+			    }
+				
+				
+				
+				
+				
+			}});
+
+		
+		button2=new JButton("注册");
+		
+	button2.addActionListener(new ActionListener(){
+			
+			public void actionPerformed(ActionEvent e){
+				String name1=textname.getText().trim();
+				String pwd1=password1.getText();
+				String id1="";
+				if(rb1.isSelected())
+					id1="教师";
+				
+				if(rb2.isSelected())
+					id1="学生";
+				
+				if(rb3.isSelected())
+					id1="管理员";
+				
+				
+				 //定义数据库联接的驱动程序
+			    String driver = "org.gjt.mm.mysql.Driver";
+			    //定义MySQL数据库的联接地址
+			    String url = "jdbc:mysql://localhost:3306/sias1?user='root';password='root'";
+			    //声明联接类
+			    Connection conn = null;
+			    try{
+			      //使用JDBC技术创建数据库联接
+			      Class.forName(driver);
+			      //使用DriverManager类的getConnection()方法建立联接,第一个字符参数定义用户名,
+			      //第二个字符参数定义密码
+			      conn = DriverManager.getConnection(url, "root", "root");
+			      if(conn != null){
+			        System.out.println("成功联接JDBC数据源.");
+			      }
+			      
+			      String sql1= "insert into usertable values('"+name1+"','"+pwd1+"','"+id1+"')";
+			      System.out.println(sql1);
+			      Statement stmt=conn.createStatement();
+			      int a=stmt.executeUpdate(sql1);
+			      if(a==1)
+			    	  System.out.println("成功注册!");
+			       
+			    }catch(Exception ex){
+			      ex.printStackTrace();
+			    }
+			    try{
+			      //关闭数据库联接类
+			      conn.close();
+			    }catch(Exception ex){
+			      ex.printStackTrace();
+			    }
+				
+				
+				
+				
+				
+			}});
 
 		Container c1=getContentPane();
 		c1.setLayout(gb1);
@@ -119,6 +242,14 @@ public class MyFrame extends JFrame {
 		gbc.weighty=1;
 		gb1.setConstraints(button1,gbc);
 		c1.add(button1);
+		
+		
+		gbc.gridx=3;
+		gbc.gridy=3;
+		gbc.weightx=1;
+		gbc.weighty=1;
+		gb1.setConstraints(button2,gbc);
+		c1.add(button2);
 		
 		
 		

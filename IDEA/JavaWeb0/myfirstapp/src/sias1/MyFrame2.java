@@ -1,5 +1,5 @@
 package sias1;
-//ÒýÈë
+//ï¿½ï¿½ï¿½ï¿½
 
 import javax.swing.JButton;
 import java.awt.event.*;
@@ -8,6 +8,10 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+
+import bean.StudentBean;
+import manage.DatabaseManage;
+
 import javax.swing.JComboBox;
 import java.awt.Container;
 import java.awt.FlowLayout;
@@ -24,7 +28,7 @@ import java.sql.Statement;
 public class MyFrame2 extends JFrame
 {
 
-    //´´½¨ÊôÐÔ
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     JLabel labelname;
     JTextField textname;
     JLabel labelage;
@@ -36,13 +40,14 @@ public class MyFrame2 extends JFrame
     JLabel labeladdress;
     JTextField textaddress;
     JLabel labelschool;
-    String[] schools = {"Ö£ÖÝ´óÑ§", "ºÓÄÏ´óÑ§", "ºÓÄÏ¿Æ¼¼´óÑ§", "ºÓÄÏ¹¤Òµ´óÑ§", "sias"};
+    String[] schools = {"Ö£ï¿½Ý´ï¿½Ñ§", "ï¿½ï¿½ï¿½Ï´ï¿½Ñ§", "ï¿½ï¿½ï¿½Ï¿Æ¼ï¿½ï¿½ï¿½Ñ§", "ï¿½ï¿½ï¿½Ï¹ï¿½Òµï¿½ï¿½Ñ§", "sias"};
     JComboBox combo1;
     JLabel labeljob;
-    String[] xbs = {"¼ÆËã»ú¿ÆÑ§Óë¼¼Êõ", "¶àÃ½Ìå", "µç×ÓÐÅÏ¢¹ÜÀí", "¼ÆËã»úÎ¬»¤", "computer"};
+    String[] xbs = {"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ë¼¼ï¿½ï¿½", "ï¿½ï¿½Ã½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½ï¿½Î¬ï¿½ï¿½", "computer"};
     JComboBox combo2;
     JButton button1;
     JButton button2, button3;
+    JButton button4, button5;
     JMenuBar bar1;
     JMenu menufile;
     JMenuItem itemopen;
@@ -58,106 +63,108 @@ public class MyFrame2 extends JFrame
     public MyFrame2()
     {
         super();
-        setTitle("Ñ§ÉúÐÅÏ¢¹ÜÀíÏµÍ³2");
+        setTitle("Ñ§ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ÏµÍ³2");
         setSize(380, 300);
         //setResizable(true);
         ImageIcon icon = new ImageIcon("image/winter.jpg");
         Image image1 = icon.getImage();
         setIconImage(image1);
-        GridBagLayout gb1 = new GridBagLayout();//Íø¸ñ°ü²¼¾Ö
-        GridBagConstraints gbc = new GridBagConstraints();//Ô¼Êø¹ÜÀíÆ÷  ¹Ü¼Ò
-        //ÐÂ½¨±êÇ©
-        labelname = new JLabel("ÐÕÃû");
+        GridBagLayout gb1 = new GridBagLayout();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        GridBagConstraints gbc = new GridBagConstraints();//Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  ï¿½Ü¼ï¿½
+        //ï¿½Â½ï¿½ï¿½ï¿½Ç©
+        labelname = new JLabel("ï¿½ï¿½ï¿½ï¿½");
 
 
-        labelage = new JLabel("ÄêÁä");
-        labelsg = new JLabel("Éí¸ß");
-        labeltz = new JLabel("ÌåÖØ");
-        labeladdress = new JLabel("¼ÒÍ¥×¡Ö·");
-        labelschool = new JLabel("ÇëÑ¡ÔñÑ§Ð£");
-        //labeljob=new JLabel("ÇëÑ¡Ôñ×¨Òµ");
-        labelxb = new JLabel("ÇëÑ¡ÔñÏµ±ð");
+        labelage = new JLabel("ï¿½ï¿½ï¿½ï¿½");
+        labelsg = new JLabel("ï¿½ï¿½ï¿½");
+        labeltz = new JLabel("ï¿½ï¿½ï¿½ï¿½");
+        labeladdress = new JLabel("ï¿½ï¿½Í¥×¡Ö·");
+        labelschool = new JLabel("ï¿½ï¿½Ñ¡ï¿½ï¿½Ñ§Ð£");
+        //labeljob=new JLabel("ï¿½ï¿½Ñ¡ï¿½ï¿½×¨Òµ");
+        labelxb = new JLabel("ï¿½ï¿½Ñ¡ï¿½ï¿½Ïµï¿½ï¿½");
 
-        //ÐÂ½¨ÎÄ±¾¿ò
+        //ï¿½Â½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½
         textname = new JTextField(10);
         textage = new JTextField(10);
         textsg = new JTextField(10);
         texttz = new JTextField(10);
         textaddress = new JTextField(10);
 
-        //ÐÂ½¨ÁÐ±í¿ò
+        //ï¿½Â½ï¿½ï¿½Ð±ï¿½ï¿½
         combo1 = new JComboBox(schools);
 
         list1 = new JList(xbs);
 
-        //ÐÂ½¨°´Å¥
-        button1 = new JButton("×¢²á");
-        button2 = new JButton("È¡Ïû");
-        button3 = new JButton("²éÑ¯");
-        //²Ëµ¥À¸
+        //ï¿½Â½ï¿½ï¿½ï¿½Å¥
+        button1 = new JButton("×¢ï¿½ï¿½");
+        button2 = new JButton("É¾ï¿½ï¿½");
+        button3 = new JButton("ï¿½ï¿½Ñ¯");
+        button4 = new JButton("ï¿½Þ¸ï¿½");
+        button5 = new JButton("ï¿½ï¿½ï¿½");
+        //ï¿½Ëµï¿½ï¿½ï¿½
         bar1 = new JMenuBar();
-        menufile = new JMenu("ÎÄ¼þ(F)");
-        itemopen = new JMenuItem("´ò¿ª");
-        itemsave = new JMenuItem("±£´æ");
-        itemcolse = new JMenuItem("¹Ø±Õ");
-        menuedit = new JMenu("±à¼­(E)");
-        itemxian = new JMenuItem("ÏÔÊ¾");
-        itemyin = new JMenuItem("Òþ²Ø");
+        menufile = new JMenu("ï¿½Ä¼ï¿½(F)");
+        itemopen = new JMenuItem("ï¿½ï¿½");
+        itemsave = new JMenuItem("ï¿½ï¿½ï¿½ï¿½");
+        itemcolse = new JMenuItem("ï¿½Ø±ï¿½");
+        menuedit = new JMenu("ï¿½à¼­(E)");
+        itemxian = new JMenuItem("ï¿½ï¿½Ê¾");
+        itemyin = new JMenuItem("ï¿½ï¿½ï¿½ï¿½");
 
 
-        //µÃµ½´°¿ÚµÄÄÚÈÝ´°¸ñ
+        //ï¿½Ãµï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½Ý´ï¿½ï¿½ï¿½
         Container c1 = getContentPane();
         c1.setLayout(gb1);
 
-        gbc.gridx = 1;//1ÁÐ
-        gbc.gridy = 1;//1ÐÐ
+        gbc.gridx = 1;//1ï¿½ï¿½
+        gbc.gridy = 1;//1ï¿½ï¿½
         gbc.weightx = 1;
         gbc.weighty = 1;
         gb1.setConstraints(labelname, gbc);
         c1.add(labelname);
 
 
-        gbc.gridx = 2;//2ÁÐ
-        gbc.gridy = 1;//1ÐÐ
+        gbc.gridx = 2;//2ï¿½ï¿½
+        gbc.gridy = 1;//1ï¿½ï¿½
         gbc.weightx = 1;
         gbc.weighty = 1;
         gb1.setConstraints(textname, gbc);
         c1.add(textname);
 
 
-        gbc.gridx = 3;//3ÁÐ
-        gbc.gridy = 1;//1ÐÐ
+        gbc.gridx = 3;//3ï¿½ï¿½
+        gbc.gridy = 1;//1ï¿½ï¿½
         gbc.weightx = 1;
         gbc.weighty = 1;
         gb1.setConstraints(labelage, gbc);
         c1.add(labelage);
 
-        gbc.gridx = 4;//1ÁÐ
-        gbc.gridy = 1;//1ÐÐ
+        gbc.gridx = 4;//1ï¿½ï¿½
+        gbc.gridy = 1;//1ï¿½ï¿½
         gbc.weightx = 1;
         gbc.weighty = 1;
         gb1.setConstraints(textage, gbc);
         c1.add(textage);
 
 
-        gbc.gridx = 1;//1ÁÐ
-        gbc.gridy = 2;//2ÐÐ
+        gbc.gridx = 1;//1ï¿½ï¿½
+        gbc.gridy = 2;//2ï¿½ï¿½
         gbc.weightx = 1;
         gbc.weighty = 1;
         gb1.setConstraints(labelsg, gbc);
         c1.add(labelsg);
 
 
-        gbc.gridx = 2;//2ÁÐ
-        gbc.gridy = 2;//2ÐÐ
+        gbc.gridx = 2;//2ï¿½ï¿½
+        gbc.gridy = 2;//2ï¿½ï¿½
         gbc.weightx = 1;
         gbc.weighty = 1;
         gb1.setConstraints(textsg, gbc);
         c1.add(textsg);
 
 
-        gbc.gridx = 3;//2ÁÐ
-        gbc.gridy = 2;//2ÐÐ
+        gbc.gridx = 3;//2ï¿½ï¿½
+        gbc.gridy = 2;//2ï¿½ï¿½
         gbc.weightx = 1;
         gbc.weighty = 1;
         gb1.setConstraints(labeltz, gbc);
@@ -165,48 +172,48 @@ public class MyFrame2 extends JFrame
         c1.add(labeltz);
 
 
-        gbc.gridx = 4;//4ÁÐ
-        gbc.gridy = 2;//2ÐÐ
+        gbc.gridx = 4;//4ï¿½ï¿½
+        gbc.gridy = 2;//2ï¿½ï¿½
         gbc.weightx = 1;
         gbc.weighty = 1;
         gb1.setConstraints(texttz, gbc);
         c1.add(texttz);
 
-        gbc.gridx = 1;//1ÁÐ
-        gbc.gridy = 3;//3ÐÐ
+        gbc.gridx = 1;//1ï¿½ï¿½
+        gbc.gridy = 3;//3ï¿½ï¿½
         gbc.weightx = 1;
         gbc.weighty = 1;
         gb1.setConstraints(labeladdress, gbc);
         c1.add(labeladdress);
 
-        gbc.gridx = 2;//2ÁÐ
-        gbc.gridy = 3;//3ÐÐ
+        gbc.gridx = 2;//2ï¿½ï¿½
+        gbc.gridy = 3;//3ï¿½ï¿½
         gbc.weightx = 1;
         gbc.weighty = 1;
         gb1.setConstraints(textaddress, gbc);
         c1.add(textaddress);
 
-        gbc.gridx = 1;//1ÁÐ
-        gbc.gridy = 4;//4ÐÐ
+        gbc.gridx = 1;//1ï¿½ï¿½
+        gbc.gridy = 4;//4ï¿½ï¿½
         gbc.weightx = 1;
         gbc.weighty = 1;
         gb1.setConstraints(labelschool, gbc);
         c1.add(labelschool);
 
-        gbc.gridx = 2;//2ÁÐ
-        gbc.gridy = 4;//4ÐÐ
+        gbc.gridx = 2;//2ï¿½ï¿½
+        gbc.gridy = 4;//4ï¿½ï¿½
         gbc.weightx = 1;
         gbc.weighty = 1;
         gb1.setConstraints(combo1, gbc);
         c1.add(combo1);
 
 
-        gbc.gridx = 1;//1ÁÐ
-        gbc.gridy = 5;//5ÐÐ
+        gbc.gridx = 1;//1ï¿½ï¿½
+        gbc.gridy = 5;//5ï¿½ï¿½
         gbc.weightx = 1;
         gbc.weighty = 1;
         gb1.setConstraints(labelxb, gbc);
-        //ÏÂÀ­¿ò
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         c1.add(labelxb);
 
 
@@ -214,22 +221,23 @@ public class MyFrame2 extends JFrame
         JScrollPane jp1 = new JScrollPane(list1);
 
 
-        gbc.gridx = 2;//2ÁÐ
-        gbc.gridy = 5;//6ÐÐ
+        gbc.gridx = 2;//2ï¿½ï¿½
+        gbc.gridy = 5;//6ï¿½ï¿½
         gbc.weightx = 1;
         gbc.weighty = 1;
         gb1.setConstraints(jp1, gbc);
         c1.add(jp1);
 
 
-        //°´Å¥
-        gbc.gridx = 2;//2ÁÐ
-        gbc.gridy = 7;//7ÐÐ
+        gbc.gridx = 3;//2ï¿½ï¿½
+        gbc.gridy = 5;//7ï¿½ï¿½
         gbc.weightx = 1;
         gbc.weighty = 1;
-        gb1.setConstraints(button1, gbc);
-        c1.add(button1);
-        button1.addActionListener(new ActionListener()
+        gb1.setConstraints(button4, gbc);
+        c1.add(button4);
+
+
+        button4.addActionListener(new ActionListener()
                                   {
 
                                       public void actionPerformed(ActionEvent e)
@@ -239,49 +247,165 @@ public class MyFrame2 extends JFrame
                                           String address3 = textaddress.getText().trim();
                                           System.out.println("name3:" + name3 + "a");
                                           System.out.println(address3);
-                                          if (name3.equals("") || address3.equals(""))
+                                          if (name3.equals("") && address3.equals(""))
                                           {
-                                              JOptionPane.showMessageDialog(null, "ÇëÊäÈëÍêÕûÐÅÏ¢");
-                                          }
+                                              JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸Äµï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½Ùµï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½Å¥ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½");
+                                              return;
 
+                                          }
 
                                           String name1 = textname.getText().trim();
                                           String age1 = textage.getText().trim();
                                           String tall1 = textsg.getText().trim();
+                                          String weight1 = texttz.getText().trim();
                                           String address1 = textaddress.getText().trim();
                                           String school1 = (String) combo1.getSelectedItem();
                                           String depart1 = (String) list1.getSelectedValue();
 
                                           System.out.println(name1);
                                           System.out.println(depart1);
-                                          String driver = "com.mysql.jdbc.Driver";
 
-                                          String url = "jdbc:mysql://localhost:3306/sias1?user='root';password='1qaz2wsx'";
+
+                                          String driver = "org.gjt.mm.mysql.Driver";
+                                          //ï¿½ï¿½ï¿½ï¿½MySQLï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½Ö·
+                                          String url = "jdbc:mysql://localhost:3306/sias1?user='root';password='root'";
+                                          //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                                           Connection conn = null;
                                           try
                                           {
+                                              //Ê¹ï¿½ï¿½JDBCï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½
                                               Class.forName(driver);
-                                              conn = DriverManager.getConnection(url, "root", "1qaz2wsx");
-
+                                              //Ê¹ï¿½ï¿½DriverManagerï¿½ï¿½ï¿½getConnection()ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½,
+                                              //ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                                              conn = DriverManager.getConnection(url, "root", "root");
                                               if (conn != null)
                                               {
-                                                  System.out.println("³É¹¦Áª½ÓJDBCÊý¾ÝÔ´.");
+                                                  System.out.println("ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½JDBCï¿½ï¿½ï¿½ï¿½Ô´.");
                                               }
-                                              Statement stmt = conn.createStatement();
-                                              String sql1 = "update student set name='" + name1 + "',age='" + age1 + "',tall='" + tall1 + "',weight='" + tall1 + "',address='" + address1 + "',school='" + school1 + "',depart='" + depart1 + "' where name='" + name1 + "'";
+
+                                              String sql1 = "update student set name='" + name1 + "',age=" + age1 + ",tall=" + tall1 + ",address='" + address1 + "',school='" + school1 + "',depart='" + depart1 + "'" + "where name='" + name1 + "'";
+
                                               System.out.println(sql1);
-                                              Statement stmt1 = conn.createStatement();
-                                              int i = stmt1.executeUpdate(sql1);
-                                              if (i == 1)
-                                              {
-                                                  System.out.println("³É¹¦");
-                                              }
+                                              Statement stmt = conn.createStatement();
+                                              int a = stmt.executeUpdate(sql1);
+                                              if (a == 1)
+                                                  System.out.println("update insert!");
+
                                           }
                                           catch (Exception ex)
                                           {
                                               ex.printStackTrace();
                                           }
-                                          Statement stmt = null;
+                                          try
+                                          {
+                                              //ï¿½Ø±ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                                              conn.close();
+                                          }
+                                          catch (Exception ex)
+                                          {
+                                              ex.printStackTrace();
+                                          }
+
+
+                                      }
+
+                                  }
+        );
+
+        gbc.gridx = 4;//2ï¿½ï¿½
+        gbc.gridy = 5;//7ï¿½ï¿½
+        gbc.weightx = 1;
+        gbc.weighty = 1;
+        gb1.setConstraints(button5, gbc);
+        c1.add(button5);
+
+
+        button5.addActionListener(new ActionListener()
+                                  {
+
+                                      public void actionPerformed(ActionEvent e)
+                                      {
+                                          textname.setText("");
+                                          textsg.setText("");
+                                          textage.setText("");
+                                          textaddress.setText("");
+                                          combo1.setSelectedIndex(0);
+                                          list1.setSelectedValue("ï¿½ï¿½Ã½ï¿½ï¿½", true);
+                                      }
+                                  }
+        );
+
+
+        //ï¿½ï¿½Å¥
+        gbc.gridx = 2;//2ï¿½ï¿½
+        gbc.gridy = 7;//7ï¿½ï¿½
+        gbc.weightx = 1;
+        gbc.weighty = 1;
+        gb1.setConstraints(button1, gbc);
+        c1.add(button1);
+        button1.addActionListener(new ActionListener()
+                                  {
+
+                                      public void actionPerformed(ActionEvent e)
+                                      {
+                                          String name1 = textname.getText().trim();
+                                          String age1 = textage.getText().trim();
+                                          String tall1 = textsg.getText().trim();
+                                          String weight1 = texttz.getText().trim();
+                                          String address1 = textaddress.getText().trim();
+                                          String school1 = (String) combo1.getSelectedItem();
+                                          String depart1 = (String) list1.getSelectedValue();
+
+                                          System.out.println(name1);
+                                          System.out.println(depart1);
+
+                                          StudentBean stu1 = new StudentBean();
+                                          stu1.setName(name1);
+                                          stu1.setAge(Integer.parseInt(age1));
+
+
+                                          stu1.setDepart(depart1);
+
+                                          DatabaseManage dm1 = new DatabaseManage();
+                                          boolean a = dm1.insert(stu1);
+                                          if (a)
+                                              System.out.println("insert success");
+                                          else
+                                              System.out.println("insert failure");
+
+
+//			    String driver = "org.gjt.mm.mysql.Driver";
+//			    //ï¿½ï¿½ï¿½ï¿½MySQLï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½Ö·
+//			    String url = "jdbc:mysql://localhost:3306/sias1?user='root';password='root'";
+//			    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//			    Connection conn = null;
+//			    try{
+//			      //Ê¹ï¿½ï¿½JDBCï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½
+//			      Class.forName(driver);
+//			      //Ê¹ï¿½ï¿½DriverManagerï¿½ï¿½ï¿½getConnection()ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½,
+//			      //ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//			      conn = DriverManager.getConnection(url, "root", "root");
+//			      if(conn != null){
+//			        System.out.println("ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½JDBCï¿½ï¿½ï¿½ï¿½Ô´.");
+//			      }
+//			      
+//			      String sql1="insert into student values('"+name1+"',"+age1+","+weight1+","+tall1+",'"+address1+"','"+school1+"','"+depart1+"')";			      System.out.println(sql1);
+//			      Statement stmt=conn.createStatement();
+//			      int a=stmt.executeUpdate(sql1);
+//			      if(a==1)
+//			    	  System.out.println("ï¿½É¹ï¿½×¢ï¿½ï¿½!");
+//			       
+//			    }catch(Exception ex){
+//			      ex.printStackTrace();
+//			    }
+//			    try{
+//			      //ï¿½Ø±ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//			      conn.close();
+//			    }catch(Exception ex){
+//			      ex.printStackTrace();
+//			    }
+//				
+
                                       }
 
                                   }
@@ -289,16 +413,69 @@ public class MyFrame2 extends JFrame
 
         );
 
-        gbc.gridx = 3;//3ÁÐ
-        gbc.gridy = 7;//7ÐÐ
+        gbc.gridx = 3;//3ï¿½ï¿½
+        gbc.gridy = 7;//7ï¿½ï¿½
         gbc.weightx = 1;
         gbc.weighty = 1;
         gb1.setConstraints(button2, gbc);
         c1.add(button2);
 
 
-        gbc.gridx = 4;//4ÁÐ
-        gbc.gridy = 7;//7ÐÐ
+        button2.addActionListener(new ActionListener()
+        {
+
+            public void actionPerformed(ActionEvent e)
+            {
+                String name1 = textname.getText().trim();
+                System.out.println(name1);
+
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                String driver = "org.gjt.mm.mysql.Driver";
+                //ï¿½ï¿½ï¿½ï¿½MySQLï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½Ö·
+                String url = "jdbc:mysql://localhost:3306/sias1?user='root';password='root'";
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                Connection conn = null;
+                try
+                {
+                    //Ê¹ï¿½ï¿½JDBCï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½
+                    Class.forName(driver);
+                    //Ê¹ï¿½ï¿½DriverManagerï¿½ï¿½ï¿½getConnection()ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½,
+                    //ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                    conn = DriverManager.getConnection(url, "root", "root");
+                    if (conn != null)
+                    {
+                        System.out.println("ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½JDBCï¿½ï¿½ï¿½ï¿½Ô´.");
+                    }
+
+                    String sql1 = "delete from student where name='" + name1 + "'";
+                    System.out.println(sql1);
+                    Statement stmt = conn.createStatement();
+                    int a = stmt.executeUpdate(sql1);
+                    if (a == 1)
+                        System.out.println("delete sucess");
+
+                }
+                catch (Exception ex)
+                {
+                    ex.printStackTrace();
+                }
+                try
+                {
+                    //ï¿½Ø±ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                    conn.close();
+                }
+                catch (Exception ex)
+                {
+                    ex.printStackTrace();
+                }
+
+
+            }
+        });
+
+
+        gbc.gridx = 4;//4ï¿½ï¿½
+        gbc.gridy = 7;//7ï¿½ï¿½
         gbc.weightx = 1;
         gbc.weighty = 1;
         gb1.setConstraints(button3, gbc);
@@ -309,74 +486,17 @@ public class MyFrame2 extends JFrame
 
             public void actionPerformed(ActionEvent e)
             {
+
                 String name1 = textname.getText().trim();
                 System.out.println(name1);
 
-                //¶¨ÒåÊý¾Ý¿âÁª½ÓµÄÇý¶¯³ÌÐò
-                String driver = "org.gjt.mm.mysql.Driver";
-                //¶¨ÒåMySQLÊý¾Ý¿âµÄÁª½ÓµØÖ·
-                String url = "jdbc:mysql://localhost:3306/sias1?user='root';password='root'";
-                //ÉùÃ÷Áª½ÓÀà
-                Connection conn = null;
-                try
-                {
-                    //Ê¹ÓÃJDBC¼¼Êõ´´½¨Êý¾Ý¿âÁª½Ó
-                    Class.forName(driver);
-                    //Ê¹ÓÃDriverManagerÀàµÄgetConnection()·½·¨½¨Á¢Áª½Ó,µÚÒ»¸ö×Ö·û²ÎÊý¶¨ÒåÓÃ»§Ãû,
-                    //µÚ¶þ¸ö×Ö·û²ÎÊý¶¨ÒåÃÜÂë
-                    conn = DriverManager.getConnection(url, "root", "root");
-                    if (conn != null)
-                    {
-                        System.out.println("³É¹¦Áª½ÓJDBCÊý¾ÝÔ´.");
-                    }
-                    Statement stmt = conn.createStatement();
-                    String sql1 = "select * from student where name='" + name1 + "'";
-                    ResultSet rs = stmt.executeQuery(sql1);
-                    if (rs != null)
-                    {
-                        if (rs.next())
-                        {
-                            String name2 = rs.getString(1);
-                            int age1 = rs.getInt(2);
-                            int tall1 = rs.getInt("tall");
-                            int weight1 = rs.getInt("weight");
-                            String address1 = rs.getString("address");
-                            String school1 = rs.getString(6);
-                            String depart1 = rs.getString("depart");
-                            textname.setText(name2);
-                            textage.setText(age1 + "");
-                            textsg.setText(tall1 + "");
-                            texttz.setText(weight1 + "");
-                            textaddress.setText(address1);
-                            combo1.setSelectedItem(school1);
-                            list1.setSelectedValue(depart1, true);
-
-                        }
-
-
-                    }
-                    else
-                    {
-
-                        JOptionPane.showMessageDialog(null, "Ã»ÓÐÕâ¸öÈË");
-
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    ex.printStackTrace();
-                }
-                try
-                {
-                    //¹Ø±ÕÊý¾Ý¿âÁª½ÓÀà
-                    conn.close();
-                }
-                catch (Exception ex)
-                {
-                    ex.printStackTrace();
-                }
-
+                DatabaseManage dm1 = new DatabaseManage();
+                StudentBean stu2 = dm1.query(name1);
+                textname.setText(stu2.getName());
+                textage.setText(stu2.getAge() + "");
+                textsg.setText(stu2.getTall() + "");
+                texttz.setText(stu2.getWeight() + "");
+                textaddress.setText(stu2.getAddress());
 
             }
         });
@@ -391,7 +511,7 @@ public class MyFrame2 extends JFrame
 
         setJMenuBar(bar1);
 
-        //ÏÔÊ¾
+        //ï¿½ï¿½Ê¾
         setVisible(true);
         //show();
     }
