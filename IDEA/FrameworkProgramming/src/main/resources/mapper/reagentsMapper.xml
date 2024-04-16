@@ -24,7 +24,7 @@
         insert into reagents
         values (#{rId}, #{rDate}, #{rFactory}, #{rUser});
     </insert>
-    <select id="selectReagentsList" resultMap="ReagentsResultMap">
+    <select id="selectAllReagent" resultMap="ReagentsResultMap">
 
         SELECT * FROM reagents
     </select>
