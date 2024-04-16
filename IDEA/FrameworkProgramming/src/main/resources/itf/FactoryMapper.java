@@ -15,5 +15,9 @@ public interface FactoryDao
     public int updateFactory(factory factory);
 
     public int deleteFactory(String fId);
+
+    public int deleteFactory(factory factory);
+
+    public List<reagents> selectReagentsByFactory(String fId)
 }
 

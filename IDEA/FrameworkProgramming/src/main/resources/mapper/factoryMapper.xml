@@ -31,7 +31,7 @@
         where fID=#{fID};
     </update>
     <select id="selectReagentsByFactory" resultMap="FactoryResultMap">
-            select rId,rDate,fName from reagents,factory
+            select rId,rDate,rFactory,rUser from reagents,factory
             where fId=reagents.rFactory and fId=#{fId};
     </select>
 </mapper>
