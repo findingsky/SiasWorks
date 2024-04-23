@@ -1,11 +1,14 @@
 package itf;
 
+import pojo.ReagentsOutputList;
+
+
 interface ReagentsOutputListMapper {
-     ReagentsOutputList selectReagentsOutputList(String rlId);
+     reagentsOutputList selectReagentsOutputList(String rlId);
 
-     int insertReagentsOutputList(ReagentsOutputList reagentsOutputList);
+     int insertReagentsOutputList(reagentsOutputList reagentsOutputList);
 
-     int updateReagentsOutputList(ReagentsOutputList reagentsOutputList);
+     int updateReagentsOutputList(reagentsOutputList reagentsOutputList);
 
      int deleteReagentsOutputList(String rlId);
 }
