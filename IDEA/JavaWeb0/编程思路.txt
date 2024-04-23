@@ -1,0 +1,20 @@
+请实现MVC架构中的查询功能。
+
+public   StudentBean   query(String name1) {
+    
+  1.得到statement类的对象stmt
+  2.执行查询语句
+    select * from student where name=' *********"
+  3.得到ResultSet对象 rs
+  4.从rs中取出学生的7个信息，
+     放到学生类的对象stu1中，返回stu1
+
+
+}
+
+
+button3中的思路：
+ 1.获取界面上的名字name1
+  2.调用query函数
+    StudentBean stu1=dm1.query(name1);
+3.把学生的7个信息再拆解出来放到界面的文本框、组合框、列表框等控件上。
