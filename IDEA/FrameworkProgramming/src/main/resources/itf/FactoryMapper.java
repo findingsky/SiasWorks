@@ -2,13 +2,10 @@ package itf;
 
 import java.util.List;
 
-<<<<<<< HEAD
-=======
 import pojo.factory;
 import pojo.reagents;
 
 
->>>>>>> bdca16bac9bb6a107563af7fffec257439e9b48f
 public interface FactoryMapper
 {
     public factory selectFactory(String fId);
