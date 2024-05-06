@@ -5,33 +5,40 @@ import java.util.Locale.*
 
 fun main()
 {
+    // 定义一个字符串
     val sorigin: String = "abc.def.ghi.jkl,opq,201410598210"
-    var origin = sorigin
-    println(origin)
-    if (origin.indexOf('.') >= 0)
+    println(sorigin)
+    // 如果字符串中包含小数点，则从字符串中删除小数点
+    if (sorigin.indexOf('.') >= 0)
     {
-        origin.substring(0, origin.indexOf('.'))
+        sorigin.substring(0, sorigin.indexOf('.'))
     }
 
-    var corigin: CharArray = stringToCharArray(origin)
+    // 将字符串转换为字符数组
+    var corigin: CharArray = stringToCharArray(sorigin)
     println(corigin)
 
-    var forigin = origin.replace(',', ';')
+    // 将字符串中的逗号替换为分号
+    var forigin = sorigin.replace(',', ';')
     println(forigin)
 
-    var result0 = origin.split(',')
+    // 将字符串拆分为数组
+    var result0 = sorigin.split(',')
     for (result in result0)
     {
         println(result)
     }
 
-    var five = origin.get(4)
+    // 获取字符串中的第五个字符
+    var five = sorigin.get(4)
     println(five)
 
-    var len = origin.length
+    // 获取字符串的长度
+    var len = sorigin.length
     println(len)
 
-    println(dollar(origin))
+    // 将字符串转换为美元符号
+    println(dollar(sorigin))
 }
 
 fun stringToCharArray(s: String): CharArray
@@ -48,6 +55,7 @@ fun stringToCharArray(s: String): CharArray
     }
 
     return result.toCharArray()
+
 }
 
 fun dollar(s: String): String
