@@ -1,21 +1,16 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.SocketOption;
-import java.sql.SQLOutput;
+
+import java.util.ArrayList;
+import java.util.Collection;
 
 public class TestJ
 {
     public static void main(String[] args)
     {
-        String s=null;
-        try
-        {
-            int len = s.length();
-            System.out.println(len);
+        Collection<String> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++){
+
+            list.add("Element " + i);
         }
-        catch (Exception e){
-            System.out.println(e);
-        }
+        System.out.println(list);
     }
 }
