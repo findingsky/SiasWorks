@@ -13,6 +13,7 @@ fun main()
         println(sorigin.substring(0, sorigin.indexOf('.')))
     }
 
+
     // 将字符串转换为字符数组
     var corigin: CharArray = stringToCharArray(sorigin)
     println(corigin)
