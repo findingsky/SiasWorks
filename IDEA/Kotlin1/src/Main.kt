@@ -1,82 +1,61 @@
-import java.text.DecimalFormat
+private var goodsMutSet: MutableSet<String> = mutableSetOf<String>()
 
-fun main()
-{
-    // 定义一个字符串
-    val sorigin: String = "abc.def.ghi.jkl,opq,201410598210"
-    println(sorigin)
+private val goodsA:String = "惠普"
 
-    // 如果sorigin中包含小数点
-    if (sorigin.indexOf('.') >= 0)
-    {
-        // 截取sorigin中从0到小数点前的字符串
-        println(sorigin.substring(0, sorigin.indexOf('.')))
+private val goodsB:String = "联想"
+
+private val goodsC:String = "戴尔"
+
+private val goodsD:String = "IBM"
+
+private val goodsE:String = "长城"
+
+private val goodsF:String = "方正"
+
+
+fun main(args: Array<String>) {
+
+    //Set没有add(添加)、remove(删除)、clear(清空)等导致集合变更的相关方法
+
+    //goodsSet = setOf(goodsA, goodsB, goodsC, goodsD, goodsE, goodsF)
+    var a=10
+    print("${a+1+1+1}")
+    goodsMutSet.add(goodsA)
+
+    goodsMutSet.add(goodsB)
+
+    goodsMutSet.add(goodsC)
+
+    goodsMutSet.add(goodsD)
+
+    goodsMutSet.add(goodsE)
+
+    goodsMutSet.add(goodsF)
+
+    goodsMutSet.remove(goodsA)
+
+
+
+    var desc = ""
+
+    desc = "iterator测试\n"
+
+    val iterator1 = goodsMutSet.iterator()
+
+    //如果迭代器还存在下一个节点，则继续取出下一个节点的记录
+
+    while (iterator1.hasNext()) {
+
+        val item = goodsMutSet.iterator().next()
+
+        desc =desc + item +"\n"
+
+        //desc = "${desc}名称：${item}\n"
+
+        //println("temp：\n$item ,")
+
     }
 
-    // 将字符串转换为字符数组
-    var corigin: CharArray = stringToCharArray(sorigin)
-    println(corigin)
+    println("iterator1 while电脑畅销榜包含以下${goodsMutSet.size}款电脑：\n$desc")
 
-    // 将字符串中的逗号替换为分号
-    var forigin = sorigin.replace(',', ';')
-    println(forigin)
-
-    // 将字符串拆分为数组
-    var result0 = sorigin.split(',')
-    for (result in result0)
-    {
-        print(result+"+")
-    }
-    println()
-
-    // 获取字符串中的第五个字符
-    var five = sorigin.get(4)
-    println(five)
-
-    // 获取字符串的长度
-    var len = sorigin.length
-    println(len)
-
-    // 将字符串中的数字转换为美元符号
-    val number = sorigin.extractNumber()
-
-    val formattedNumber = number.formatAsCurrencyWithoutSeparator()
-    println(formattedNumber)
-}
-
-fun stringToCharArray(s: String): CharArray
-{
-    val charArray = s.toCharArray()
-    val result = mutableListOf<Char>()
-    for (i in charArray.indices)
-    {
-        result.add(charArray[i])
-        if (i < charArray.size - 1)
-        {
-            result.add('-')
-        }
-    }
-    return result.toCharArray()
-}
-
-/**
- * 从字符串中提取数字
- * @return 提取到的数字，如果没有提取到则返回0
- */
-fun String.extractNumber(): Long
-{
-    val pattern = Regex("-?\\d+")
-    val match = pattern.find(this)
-    return match?.let { it.value.toLong() } ?: 0L
-}
-
-/**
- * 将Long类型的数字格式化为货币格式（无分隔符）
- * @return 格式化后的货币字符串
- */
-fun Long.formatAsCurrencyWithoutSeparator(): String
-{
-    val formatter = DecimalFormat("0")
-    val formatted = formatter.format(this)
-    return "$" + formatted
 }
