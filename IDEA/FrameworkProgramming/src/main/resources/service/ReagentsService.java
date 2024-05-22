@@ -1,18 +1,21 @@
 package service;
+import pojo.Reagents;
+import pojo.Factory;
+import itf.ReagentsDao;
 
-import pojo.reagents;
+import java.util.List;
 
 public interface ReagentsService {
 
-    // 创建试剂实体类对象
-    reagents create(reagents r);
+    int deleteReagents(char[] rId);
 
-    // 读取试剂实体类对象
-    reagents read(char[] rid);
+    int updateReagents(Reagents reagents);
 
-    // 更新试剂实体类对象
-    reagents update(reagents r);
+    List<Reagents> selectReagents(char[] rId);
 
-    // 删除试剂实体类对象
-    void delete(char[] rid);
+    int insertReagents(Reagents reagents);
+
+    List<Factory> selectReagentsFactory(char[] rId);
+
+    List<Reagents> selectAllReagents();
 }

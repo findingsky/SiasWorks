@@ -1,37 +1,51 @@
 package service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import pojo.factory;
 import service.FactoryService;
 
+import java.util.List;
+
+@Service
 public class FactoryServiceImpl implements FactoryService
 {
+    @Autowired
+    private factoryDao factoryDao;
 
     @Override
-    public factory create(factory f)
+    public int deleteFactory(char[] fId)
     {
-        // 在这里实现创建工厂实体类对象的逻辑
-        return f;
+        return factoryDao.deleteFactory(fId);
     }
 
     @Override
-    public factory read(char[] fId)
+    public int insertFactory(factory factory)
     {
-        // 在这里实现根据工厂ID读取工厂实体类对象的逻辑
-        factory f = new factory();
-        f.setFId(fId);
-        return f;
+        return factoryDao.insertFactory(factory);
     }
 
     @Override
-    public factory update(factory f)
+    public factory selectFactory(int fId)
     {
-        // 在这里实现更新工厂实体类对象的逻辑
-        return f;
+        return factoryDao.selectFactory(fId);
     }
 
     @Override
-    public void delete(char[] fId)
+    public List<factory> selectAllFactory()
     {
-        // 在这里实现根据工厂ID删除工厂实体类对象的逻辑
+        return factoryDao.selectAllFactory();
+    }
+
+    @Override
+    public int updateFactory(factory factory)
+    {
+        return factoryDao.updateFactory(factory);
+    }
+
+    @Override
+    public List<factory> selectReagentsByFactory(char fId)
+    {
+        return factoryDao.selectReagentsByFactory(fId);
     }
 }

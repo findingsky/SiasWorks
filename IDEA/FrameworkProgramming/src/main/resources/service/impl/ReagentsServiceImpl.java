@@ -1,32 +1,51 @@
 package service.impl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import pojo.Reagents;
+import pojo.Factory;
+import itf.ReagentsDao;
 
-import pojo.reagents;
-import service.ReagentsService;
+import java.util.List;
 
-public class ReagentsServiceImpl implements ReagentsService {
+@Service
+public class ReagentsServiceImpl implements ReagentsService
+{
+    @Autowired
+    private ReagentsDao reagentsDao;
 
     @Override
-    public reagents create(reagents r) {
-        // 在这里实现创建试剂实体类对象的逻辑
-        return r;
+    public int deleteReagents(char[] rId)
+    {
+        return reagentsDao.deleteReagents(rId);
     }
 
     @Override
-    public reagents read(char[] rid) {
-        // 在这里实现根据试剂ID读取试剂实体类对象的逻辑
-        reagents r = new reagents();
-        r.setRid(rid);
-        return r;
+    public int updateReagents(Reagents reagents)
+    {
+        return reagentsDao.updateReagents(reagents);
     }
 
     @Override
-    public reagents update(reagents r) {
-        // 在这里实现更新试剂实体类对象的逻辑
-        return r;
+    public List<Reagents> selectReagents(char[] rId)
+    {
+        return reagentsDao.selectReagents(rId);
     }
 
     @Override
-    public void delete(char[] rid) {
-        // 在这里实现根据试剂ID删除试剂实体类对象的逻辑
+    public int insertReagents(Reagents reagents)
+    {
+        return reagentsDao.insertReagents(reagents);
+    }
+
+    @Override
+    public List<Factory> selectReagentsFactory(char[] rId)
+    {
+        return reagentsDao.selectReagentsFactory(rId);
+    }
+
+    @Override
+    public List<Reagents> selectAllReagents()
+    {
+        return reagentsDao.selectAllReagents();
     }
 }

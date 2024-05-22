@@ -2,17 +2,15 @@ package service;
 
 import pojo.factory;
 
+import java.util.List;
+
 public interface FactoryService {
 
-    // 创建工厂实体类对象
-    factory create(factory f);
+    int deleteFactory(char[] fId);
+    int insertFactory(Factory factory);
+    Factory selectFactory(int fId);
+    List<Factory> selectAllFactory();
+    int updateFactory(Factory factory);
+    List<Factory> selectReagentsByFactory(char fId);
 
-    // 读取工厂实体类对象
-    factory read(char[] fId);
-
-    // 更新工厂实体类对象
-    factory update(factory f);
-
-    // 删除工厂实体类对象
-    void delete(char[] fId);
 }

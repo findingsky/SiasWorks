@@ -11,13 +11,13 @@ import java.util.List;
 public interface factoryMapper {
 
     @Delete("delete from factory where fId = #{fId};")
-    int deleteFactory(int fId);
+    int deleteFactory(char[] fId);
 
     @Insert("insert into factory values (#{fID}, #{fName}, #{fTel}, #{fAddress});")
     int insertFactory(Factory factory);
 
     @Select("SELECT * FROM factory where fID = #{fID};")
-    Factory selectFactory(int fID);
+    Factory selectFactory(int fId);
 
     @Select("select * from factory;")
     List<Factory> selectAllFactory();
@@ -26,6 +26,6 @@ public interface factoryMapper {
     int updateFactory(Factory factory);
 
     @Select("select rId,rDate,rFactory,rUser from reagents,factory where fId=reagents.rFactory and fId=#{fId};")
-    List<Factory> selectReagentsByFactory(int fId);
+    List<Factory> selectReagentsByFactory(char[] fId);
 }
 
