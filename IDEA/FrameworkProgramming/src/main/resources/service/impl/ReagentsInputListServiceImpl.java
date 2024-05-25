@@ -1,38 +1,46 @@
 package service.impl;
 
+import mapper.ReagentsInputListMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import pojo.reagentsInputList;
-import service.ReagentsInputListService;
 
-public class ReagentsInputListServiceImpl implements ReagentsInputListService {
+@Service
+public class ReagentsInputListServiceImpl implements ReagentsInputListService
+{
+
+    @Autowired
+    private ReagentsInputListMapper reagentsInputListMapper;
 
     @Override
-    public reagentsInputList create(reagentsInputList ril) {
-        // 在这里实现创建试剂输入列表实体类对象的逻辑
+    public reagentsInputList create(reagentsInputList ril)
+    {
+        reagentsInputListMapper.insertReagentsInputList(ril);
         return ril;
     }
 
     @Override
-    public reagentsInputList read(char[] riId) {
-        // 在这里实现根据试剂ID读取试剂输入列表实体类对象的逻辑
-        reagentsInputList ril = new reagentsInputList();
-        ril.setRiId(riId);
+    public reagentsInputList read(char[] rlId)
+    {
+        return reagentsInputListMapper.selectReagentsInputList(rlId);
+    }
+
+    @Override
+    public reagentsInputList update(reagentsInputList ril)
+    {
+        reagentsInputListMapper.updateReagentsInputList(ril);
         return ril;
     }
 
     @Override
-    public reagentsInputList update(reagentsInputList ril) {
-        // 在这里实现更新试剂输入列表实体类对象的逻辑
-        return ril;
+    public void delete(char[] rlId)
+    {
+        reagentsInputListMapper.deleteReagentsInputList(rlId);
     }
 
     @Override
-    public void delete(char[] riId) {
-        // 在这里实现根据试剂ID删除试剂输入列表实体类对象的逻辑
-    }
-
-    @Override
-    public boolean checkInput(reagentsInputList ril) {
-        // 在这里实现检查输入的试剂是否符合要求的逻辑
+    public boolean checkInput(reagentsInputList ril)
+    {
         return ril.checkInput();
     }
 }

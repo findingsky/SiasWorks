@@ -1,37 +1,42 @@
 package service.impl;
 
+import mapper.FactoryMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import pojo.factory;
-import service.FactoryService;
 
+import java.util.List;
+
+@Service
 public class FactoryServiceImpl implements FactoryService
 {
 
+    @Autowired
+    private FactoryMapper factoryMapper;
+
     @Override
-    public factory create(factory f)
+    public factory create(factory f) throws Exception
     {
-        // 在这里实现创建工厂实体类对象的逻辑
+        factoryMapper.insertFactory(f);
         return f;
     }
 
     @Override
-    public factory read(char[] fId)
+    public factory read(char[] fId) throws Exception
     {
-        // 在这里实现根据工厂ID读取工厂实体类对象的逻辑
-        factory f = new factory();
-        f.setFId(fId);
+        return factoryMapper.selectFactory(fId);
+    }
+
+    @Override
+    public factory update(factory f) throws Exception
+    {
+        factoryMapper.updateFactory(f);
         return f;
     }
 
     @Override
-    public factory update(factory f)
+    public void delete(char[] fId) throws Exception
     {
-        // 在这里实现更新工厂实体类对象的逻辑
-        return f;
-    }
-
-    @Override
-    public void delete(char[] fId)
-    {
-        // 在这里实现根据工厂ID删除工厂实体类对象的逻辑
+        factoryMapper.deleteFactory(fId);
     }
 }

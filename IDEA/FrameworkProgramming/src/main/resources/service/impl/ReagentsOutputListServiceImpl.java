@@ -1,45 +1,40 @@
 package service.impl;
 
+import mapper.ReagentsOutputListMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pojo.reagentsOutputList;
-import service.ReagentsOutputListService;
-
-import java.util.List;
 
 @Service
 public class ReagentsOutputListServiceImpl implements ReagentsOutputListService
 {
+
     @Autowired
-    private ReagentsOutputListDao reagentsOutputListDao;
+    private ReagentsOutputListMapper reagentsOutputListMapper;
 
     @Override
-    public reagentsOutputList getReagentsOutputListById(char[] id)
+    public reagentsOutputList create(reagentsOutputList rol)
     {
-        return reagentsOutputListDao.getReagentsOutputListById(id);
+        reagentsOutputListMapper.insertReagentsOutputList(rol);
+        return rol;
     }
 
     @Override
-    public void addReagentsOutputList(reagentsOutputList ro)
+    public reagentsOutputList read(char[] rlId)
     {
-        reagentsOutputListDao.addReagentsOutputList(ro);
+        return reagentsOutputListMapper.selectReagentsOutputList(rlId);
     }
 
     @Override
-    public void updateReagentsOutputList(reagentsOutputList ro)
+    public reagentsOutputList update(reagentsOutputList rol)
     {
-        reagentsOutputListDao.updateReagentsOutputList(ro);
+        reagentsOutputListMapper.updateReagentsOutputList(rol);
+        return rol;
     }
 
     @Override
-    public void deleteReagentsOutputList(char[] id)
+    public void delete(char[] rlId)
     {
-        reagentsOutputListDao.deleteReagentsOutputList(id);
-    }
-
-    @Override
-    public List<reagentsOutputList> getAllReagentsOutputLists()
-    {
-        return reagentsOutputListDao.getAllReagentsOutputLists();
+        reagentsOutputListMapper.deleteReagentsOutputList(rlId);
     }
 }

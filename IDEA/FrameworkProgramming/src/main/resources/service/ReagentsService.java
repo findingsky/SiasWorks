@@ -2,17 +2,24 @@ package service;
 
 import pojo.reagents;
 
-public interface ReagentsService {
+public interface ReagentsService
+{
 
-    // 创建试剂实体类对象
-    reagents create(reagents r);
+    // 删除试剂
+    int deleteReagents(char[] rId);
 
-    // 读取试剂实体类对象
-    reagents read(char[] rid);
+    // 更新试剂
+    int updateReagents(reagents r);
 
-    // 更新试剂实体类对象
-    reagents update(reagents r);
+    // 查询试剂
+    reagents selectReagents(char[] rId);
 
-    // 删除试剂实体类对象
-    void delete(char[] rid);
+    // 插入试剂
+    int insertReagents(reagents r);
+
+    // 查询所有试剂
+    List<reagents> selectAllReagent();
+
+    // 根据工厂查询试剂
+    reagents selectReagentsFactory(char[] rId);
 }

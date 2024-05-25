@@ -2,12 +2,18 @@ package service;
 
 import pojo.user;
 
-import java.util.List;
-
 public interface UserService
 {
+
+    // 删除用户
+    int deleteUser(char[] uId);
+
+    // 插入用户
+    int insertUser(user u);
+
+    // 查询用户
     user selectUser(char[] uId);
-    void insertUser(user user);
-    void updateUser(user user);
-    void deleteUser(char[] uId);
+
+    // 更新用户
+    int updateUser(user u);
 }
