@@ -13,25 +13,25 @@ public class UserServiceImpl implements UserService
     private UserMapper userMapper;
 
     @Override
-    public int deleteUser(char[] uId)
+    public int deleteUser(char[] uId)throws Exception
     {
         return userMapper.deleteUser(uId);
     }
 
     @Override
-    public int insertUser(user u)
+    public int insertUser(user u)throws Exception
     {
         return userMapper.insertUser(u);
     }
 
     @Override
-    public user selectUser(char[] uId)
+    public user selectUser(char[] uId)throws Exception
     {
         return userMapper.selectUser(uId);
     }
 
     @Override
-    public int updateUser(user u)
+    public int updateUser(user u)throws Exception
     {
         return userMapper.updateUser(u);
     }

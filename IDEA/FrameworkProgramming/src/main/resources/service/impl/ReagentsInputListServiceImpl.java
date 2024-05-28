@@ -13,33 +13,33 @@ public class ReagentsInputListServiceImpl implements ReagentsInputListService
     private ReagentsInputListMapper reagentsInputListMapper;
 
     @Override
-    public reagentsInputList create(reagentsInputList ril)
+    public reagentsInputList create(reagentsInputList ril)throws Exception
     {
         reagentsInputListMapper.insertReagentsInputList(ril);
         return ril;
     }
 
     @Override
-    public reagentsInputList read(char[] rlId)
+    public reagentsInputList read(char[] rlId)throws Exception
     {
         return reagentsInputListMapper.selectReagentsInputList(rlId);
     }
 
     @Override
-    public reagentsInputList update(reagentsInputList ril)
+    public reagentsInputList update(reagentsInputList ril)throws Exception
     {
         reagentsInputListMapper.updateReagentsInputList(ril);
         return ril;
     }
 
     @Override
-    public void delete(char[] rlId)
+    public void delete(char[] rlId)throws Exception
     {
         reagentsInputListMapper.deleteReagentsInputList(rlId);
     }
 
     @Override
-    public boolean checkInput(reagentsInputList ril)
+    public boolean checkInput(reagentsInputList ril)throws Exception
     {
         return ril.checkInput();
     }

@@ -13,27 +13,27 @@ public class ReagentsOutputListServiceImpl implements ReagentsOutputListService
     private ReagentsOutputListMapper reagentsOutputListMapper;
 
     @Override
-    public reagentsOutputList create(reagentsOutputList rol)
+    public reagentsOutputList create(reagentsOutputList rol)throws Exception
     {
         reagentsOutputListMapper.insertReagentsOutputList(rol);
         return rol;
     }
 
     @Override
-    public reagentsOutputList read(char[] rlId)
+    public reagentsOutputList read(char[] rlId)throws Exception
     {
         return reagentsOutputListMapper.selectReagentsOutputList(rlId);
     }
 
     @Override
-    public reagentsOutputList update(reagentsOutputList rol)
+    public reagentsOutputList update(reagentsOutputList rol)throws Exception
     {
         reagentsOutputListMapper.updateReagentsOutputList(rol);
         return rol;
     }
 
     @Override
-    public void delete(char[] rlId)
+    public void delete(char[] rlId)throws Exception
     {
         reagentsOutputListMapper.deleteReagentsOutputList(rlId);
     }
