@@ -9,8 +9,10 @@ import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
+import pojo.*;
+
 @Mapper
-public interface ReagentsOutputListMappers
+public interface ReagentsOutputListDao
 {
 
     @Delete("delete from reagentsOutputlist where rlId = #{rlId};")

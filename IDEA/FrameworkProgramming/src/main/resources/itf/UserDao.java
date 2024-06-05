@@ -4,8 +4,9 @@ import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+import pojo.*;
 
-public interface UserMapper
+public interface UserDao
 {
     @Delete("delete from User where uId = #{uId}")
     int deleteUser(char[] uId);

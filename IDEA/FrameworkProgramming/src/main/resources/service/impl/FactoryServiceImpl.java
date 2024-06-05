@@ -3,9 +3,8 @@ package service.impl;
 import mapper.FactoryMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pojo.factory;
-
-import java.util.List;
+import pojo.Factory;
+import service.FactoryService;
 
 @Service
 public class FactoryServiceImpl implements FactoryService
@@ -15,20 +14,20 @@ public class FactoryServiceImpl implements FactoryService
     private FactoryMapper factoryMapper;
 
     @Override
-    public factory create(factory f) throws Exception
+    public Factory create(Factory f) throws Exception
     {
         factoryMapper.insertFactory(f);
         return f;
     }
 
     @Override
-    public factory read(char[] fId) throws Exception
+    public Factory read(char[] fId) throws Exception
     {
         return factoryMapper.selectFactory(fId);
     }
 
     @Override
-    public factory update(factory f) throws Exception
+    public Factory update(Factory f) throws Exception
     {
         factoryMapper.updateFactory(f);
         return f;

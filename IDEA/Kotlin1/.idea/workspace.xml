@@ -5,21 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea1fbbd9-a8f4-4b76-be2e-ed2cbddccb58" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/../myfirstapp/bin/manage/DatabaseManage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myfirstapp/src/sias1/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myfirstapp/src/sias1/StudentView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../软件工程综合测试期中作业源代码/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../软件工程综合测试期中作业源代码/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../软件工程综合测试期中作业源代码/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../软件工程综合测试期中作业源代码/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../软件工程综合测试期中作业源代码/example5_5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kotlin1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Kotlin1/TestJ.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestJ.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/src/main/resources/MybatisDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrameworkProgramming/src/main/resources/MybatisDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/src/main/resources/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrameworkProgramming/src/main/resources/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/MybatisDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/MybatisDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/itf/FactoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/itf/FactoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/itf/FactoryDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/factory/factoryDelectMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/factory/factoryInsertMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/factory/factorySelectMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/factory/factoryUpdateMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/reagents/reagentsDeleteMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/reagents/reagentsInsertMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/reagents/reagentsSelectMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/reagents/reagentsUpdadeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/reagentsInputList/reagentsInputListInsertMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/reagentsInputList/reagentsInputListSelectMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/reagentsInputList/reagentsInputListUpdateMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/reagentsInputList/reagentsinputlistDeleteMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/reagentsOutputList/reagentsoutputlistDeleteMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/reagentsOutputList/reagentsoutputlistInsertMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/reagentsOutputList/reagentsoutputlistSelectMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/reagentsOutputList/reagentsoutputlistUpdateMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/user/userDeleteMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/user/userInsertMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/user/userSelectMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mapper/user/userUpdateMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/members/factory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/members/reagents.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/members/reagentsInputList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/members/reagentsList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/members/reagentsOutputList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/members/user.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrameworkProgramming/target/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +101,12 @@
       <updated>1716351847882</updated>
       <workItem from="1716351850251" duration="3006000" />
       <workItem from="1716634148454" duration="13000" />
+      <workItem from="1716941324204" duration="961000" />
+      <workItem from="1717373824332" duration="102000" />
+      <workItem from="1717373970418" duration="2771000" />
+      <workItem from="1717382784279" duration="1467000" />
+      <workItem from="1717477295394" duration="2295000" />
+      <workItem from="1717546353162" duration="24000" />
     </task>
     <servers />
   </component>

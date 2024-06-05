@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="reagentsOutputListMappers">
+    <delete id="deleteReagentsOutputList">
+        delete
+        from reagentsOutputlist
+        where rlId = #{rlId};
+    </delete>
+    <insert id="insertReagentsOutputList">
+        insert into reagentsinputlist
+        values (#{rlId}, #{rlDate}, #{roUsage}, #{rLReg});
+    </insert>
+    <select id="selectReagentsOutputList" resultMap="ReagentsOutputListResultMap">
+        SELECT * FROM reagentsoutputlist where rlId = #{rlId}
+    </select>
+    <update id="updateReagentsOutputList">
+        update reagentsinputlist
+        <trim prefix="set" suffixOverrides=",">
+            rlId=#{rlId},
+            rlDate=#{rlDate},
+            rlFactory=#{roUsage},
+            rLReg=#{rLReg},
+        </trim>
+        where rlId=#{rlId};
+    </update>
+</mapper>

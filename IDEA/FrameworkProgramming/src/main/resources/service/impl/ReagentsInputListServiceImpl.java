@@ -3,7 +3,7 @@ package service.impl;
 import mapper.ReagentsInputListMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pojo.reagentsInputList;
+import pojo.ReagentsInputList;
 
 @Service
 public class ReagentsInputListServiceImpl implements ReagentsInputListService
@@ -13,20 +13,20 @@ public class ReagentsInputListServiceImpl implements ReagentsInputListService
     private ReagentsInputListMapper reagentsInputListMapper;
 
     @Override
-    public reagentsInputList create(reagentsInputList ril)throws Exception
+    public ReagentsInputList create(ReagentsInputList ril)throws Exception
     {
         reagentsInputListMapper.insertReagentsInputList(ril);
         return ril;
     }
 
     @Override
-    public reagentsInputList read(char[] rlId)throws Exception
+    public ReagentsInputList read(char[] rlId)throws Exception
     {
         return reagentsInputListMapper.selectReagentsInputList(rlId);
     }
 
     @Override
-    public reagentsInputList update(reagentsInputList ril)throws Exception
+    public ReagentsInputList update(ReagentsInputList ril)throws Exception
     {
         reagentsInputListMapper.updateReagentsInputList(ril);
         return ril;
@@ -39,7 +39,7 @@ public class ReagentsInputListServiceImpl implements ReagentsInputListService
     }
 
     @Override
-    public boolean checkInput(reagentsInputList ril)throws Exception
+    public boolean checkInput(ReagentsInputList ril)throws Exception
     {
         return ril.checkInput();
     }
