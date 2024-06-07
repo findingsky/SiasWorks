@@ -31,9 +31,4 @@ public class UserServiceImpl implements UserService
         return userMapper.selectUser(uId);
     }
 
-    @Override
-    public int updateUser(User u)throws Exception
-    {
-        return userMapper.updateUser(u);
-    }
 }

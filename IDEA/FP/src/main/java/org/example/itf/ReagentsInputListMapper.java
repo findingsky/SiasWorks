@@ -16,13 +16,14 @@ public interface ReagentsInputListMapper
     @Select("SELECT * FROM reagentsinputlist where reagentsinputlist.rlId = #{rlId};")
     ReagentsInputList selectReagentsInputList(char[] rlId);
 
-    @Update("update reagentsinputlist\n" +
-            "<trim prefix=\"set\" suffixOverrides=\",\">\n" +
-            "    rlId=#{rlId},\n" +
-            "    rlDate=#{rlDate},\n" +
-            "    rlFactory=#{rlFactory},\n" +
-            "    rLReg=#{rLReg},\n" +
-            "</trim>\n" +
-            "where rlId=#{rlId};")
+    @Update("""
+            update reagentsinputlist
+            <trim prefix="set" suffixOverrides=",">
+                rlId=#{rlId},
+                rlDate=#{rlDate},
+                rlFactory=#{rlFactory},
+                rLReg=#{rLReg},
+            </trim>
+            where rlId=#{rlId};""")
     int updateReagentsInputList(ReagentsInputList reagentsInputList);
 }

@@ -19,7 +19,7 @@ public interface ReagentsOutputListMapper
     @Select("SELECT * FROM reagentsoutputlist where rlId = #{rlId};")
     ReagentsOutputList selectReagentsOutputList(@Param("rlId") char[] rlId);
 
-    @Update("update reagentsinputlist set rlId=#{rlId}, rlDate=#{rlDate}, rlFactory=#{roUsage}, rLReg=#{rLReg} where rlId=#{rlId};")
+    @Update("update reagentsOutputlist set rlId=#{rlId}, rlDate=#{rlDate}, roUsage=#{roUsage}, rLReg=#{rLReg} where rlId=#{rlId};")
     int updateReagentsOutputList(@Param("rlId") char[] rlId,
                                  @Param("rlDate") String rlDate,
                                  @Param("roUsage") String roUsage,

@@ -15,15 +15,5 @@
         FROM user
         where uId = #{uId}
     </select>
-    <update id="updateUser">
-        update user
-        <trim prefix="set" suffixOverrides=",">
-            uId=#{uId},
-            uName=#{uName},
-            uTel=#{uTel},
-            uLastTestTime=#{uLastTestTime},
-            uType=#{uType}
-        </trim>
-        where rlId=#{rlId};
-    </update>
+
 </mapper>

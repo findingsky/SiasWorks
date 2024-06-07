@@ -18,11 +18,11 @@
     </environments>
     <!-- 配置映射文件 -->
     <mappers>
-        <mapper resource="mapper/reagentsoutputlistMapper.xml"/>
         <mapper resource="mapper/factoryMapper.xml"/>
         <mapper resource="mapper/userMapper.xml"/>
         <mapper resource="mapper/reagentsinputlistMapper.xml"/>
         <mapper resource="mapper/reagentsMapper.xml"/>
+        <mapper resource="mapper/reagentsoutputlistMapper.xml"/>
     </mappers>
 
 </configuration>

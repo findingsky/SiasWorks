@@ -13,6 +13,4 @@ public interface UserService
     // 查询用户
     User selectUser(char[] uId)throws Exception;
 
-    // 更新用户
-    int updateUser(User u)throws Exception;
 }
