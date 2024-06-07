@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="reagentsInputListMappers">
+<mapper namespace="org.example.itf.ReagentsInputListMapper">
 
 <delete id="deleteReagentsInputList">
         delete from reagentsinputlist where rlId=#{rlId};
@@ -9,7 +9,7 @@
         insert into reagentsinputlist
         values (#{rlId}, #{rlDate}, #{rlFactory}, #{rLReg});
     </insert>
-    <select id="selectReagentsInputList" resultMap="reagentsinputlistResultMap">
+    <select id="selectReagentsInputList" resultType="org.example.pojo.ReagentsInputList">
         SELECT *
         FROM reagentsinputlist
         where reagentsinputlist.rlId = #{rlId};

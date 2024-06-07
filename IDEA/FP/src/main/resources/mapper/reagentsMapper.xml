@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="reagentsMappers">
+<mapper namespace="org.example.itf.ReagentsMapper">
     <delete id="deleteReagents">
         delete
         from reagents
@@ -16,7 +16,7 @@
         </trim>
         where fID=#{fID};
     </update>
-    <select id="selectReagents" resultMap="ReagentsResultMap">
+    <select id="selectReagents" resultType="org.example.pojo.Reagents">
         SELECT * FROM reagents
         where rId=#{rId}
     </select>
@@ -24,11 +24,11 @@
         insert into reagents
         values (#{rId}, #{rDate}, #{rFactory}, #{rUser});
     </insert>
-    <select id="selectAllReagent" resultMap="ReagentsResultMap">
+    <select id="selectAllReagent" resultType="org.example.pojo.Reagents">
 
         SELECT * FROM reagents
     </select>
-    <select id="selectReagentsFactory" resultMap="ReagentsResultMap">
+    <select id="selectReagentsFactory" resultType="org.example.pojo.Factory">
         SELECT fID,fName,fAddress,fTel FROM factory,reagents
         where rId=#{rId} and factory.fID=reagents.rFactory
     </select>

@@ -20,8 +20,9 @@
     <mappers>
         <mapper resource="mapper/reagentsoutputlistMapper.xml"/>
         <mapper resource="mapper/factoryMapper.xml"/>
-        <mapper resource="mapper/userMapperxml"/>
+        <mapper resource="mapper/userMapper.xml"/>
         <mapper resource="mapper/reagentsinputlistMapper.xml"/>
         <mapper resource="mapper/reagentsMapper.xml"/>
     </mappers>
+
 </configuration>

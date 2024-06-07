@@ -1,0 +1,70 @@
+2024-06-05T02:18:55.518951Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.36) starting as process 10520
+2024-06-05T02:18:55.909180Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-06-05T02:19:02.235179Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-06-05T02:19:02.987920Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 22, name 'eims/client', file '.\eims\client.ibd' is missing!
+2024-06-05T02:19:02.993671Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 23, name 'eims/contact', file '.\eims\contact.ibd' is missing!
+2024-06-05T02:19:02.998413Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 24, name 'eims/cs', file '.\eims\cs.ibd' is missing!
+2024-06-05T02:19:03.004442Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 25, name 'eims/product', file '.\eims\product.ibd' is missing!
+2024-06-05T02:19:03.007814Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 26, name 'eims/staff', file '.\eims\staff.ibd' is missing!
+2024-06-05T02:19:03.011663Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 27, name 'eims/user', file '.\eims\user.ibd' is missing!
+2024-06-05T02:19:03.892148Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2024-06-05T02:19:03.895453Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2024-06-05T02:19:04.099975Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2024-06-05T02:19:04.100611Z 0 [System] [MY-010931] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: ready for connections. Version: '8.0.36'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2024-06-05T02:20:56.225186Z 12 [ERROR] [MY-012611] [InnoDB] Operating system error number 3 in a file operation.
+2024-06-05T02:20:56.227660Z 12 [ERROR] [MY-012612] [InnoDB] The error means the system cannot find the path specified. It might be too long or it might not exist.
+2024-06-05T02:20:56.230459Z 12 [ERROR] [MY-012216] [InnoDB] Cannot open datafile for read-only: '.\eims\client.ibd' OS error: 82
+2024-06-05T02:20:56.232837Z 12 [Warning] [MY-012111] [InnoDB] Trying to access missing tablespace 22
+2024-06-05T02:20:56.235212Z 12 [Warning] [MY-012049] [InnoDB] Cannot calculate statistics for table `eims`.`client` because the .ibd file is missing. Please refer to http://dev.mysql.com/doc/refman/8.0/en/innodb-troubleshooting.html for how to resolve the issue.
+2024-06-05T02:20:56.244904Z 12 [ERROR] [MY-012611] [InnoDB] Operating system error number 3 in a file operation.
+2024-06-05T02:20:56.246887Z 12 [ERROR] [MY-012612] [InnoDB] The error means the system cannot find the path specified. It might be too long or it might not exist.
+2024-06-05T02:20:56.249549Z 12 [ERROR] [MY-012216] [InnoDB] Cannot open datafile for read-only: '.\eims\contact.ibd' OS error: 82
+2024-06-05T02:20:56.251935Z 12 [Warning] [MY-012049] [InnoDB] Cannot calculate statistics for table `eims`.`contact` because the .ibd file is missing. Please refer to http://dev.mysql.com/doc/refman/8.0/en/innodb-troubleshooting.html for how to resolve the issue.
+2024-06-05T02:20:56.259984Z 12 [ERROR] [MY-012611] [InnoDB] Operating system error number 3 in a file operation.
+2024-06-05T02:20:56.261881Z 12 [ERROR] [MY-012612] [InnoDB] The error means the system cannot find the path specified. It might be too long or it might not exist.
+2024-06-05T02:20:56.264515Z 12 [ERROR] [MY-012216] [InnoDB] Cannot open datafile for read-only: '.\eims\cs.ibd' OS error: 82
+2024-06-05T02:20:56.266859Z 12 [Warning] [MY-012049] [InnoDB] Cannot calculate statistics for table `eims`.`cs` because the .ibd file is missing. Please refer to http://dev.mysql.com/doc/refman/8.0/en/innodb-troubleshooting.html for how to resolve the issue.
+2024-06-05T02:20:56.275130Z 12 [ERROR] [MY-012611] [InnoDB] Operating system error number 3 in a file operation.
+2024-06-05T02:20:56.277084Z 12 [ERROR] [MY-012612] [InnoDB] The error means the system cannot find the path specified. It might be too long or it might not exist.
+2024-06-05T02:20:56.279792Z 12 [ERROR] [MY-012216] [InnoDB] Cannot open datafile for read-only: '.\eims\product.ibd' OS error: 82
+2024-06-05T02:20:56.282251Z 12 [Warning] [MY-012049] [InnoDB] Cannot calculate statistics for table `eims`.`product` because the .ibd file is missing. Please refer to http://dev.mysql.com/doc/refman/8.0/en/innodb-troubleshooting.html for how to resolve the issue.
+2024-06-05T02:20:56.291283Z 12 [ERROR] [MY-012611] [InnoDB] Operating system error number 3 in a file operation.
+2024-06-05T02:20:56.293014Z 12 [ERROR] [MY-012612] [InnoDB] The error means the system cannot find the path specified. It might be too long or it might not exist.
+2024-06-05T02:20:56.295764Z 12 [ERROR] [MY-012216] [InnoDB] Cannot open datafile for read-only: '.\eims\staff.ibd' OS error: 82
+2024-06-05T02:20:56.298142Z 12 [Warning] [MY-012049] [InnoDB] Cannot calculate statistics for table `eims`.`staff` because the .ibd file is missing. Please refer to http://dev.mysql.com/doc/refman/8.0/en/innodb-troubleshooting.html for how to resolve the issue.
+2024-06-05T02:20:56.307073Z 12 [ERROR] [MY-012611] [InnoDB] Operating system error number 3 in a file operation.
+2024-06-05T02:20:56.308885Z 12 [ERROR] [MY-012612] [InnoDB] The error means the system cannot find the path specified. It might be too long or it might not exist.
+2024-06-05T02:20:56.311480Z 12 [ERROR] [MY-012216] [InnoDB] Cannot open datafile for read-only: '.\eims\user.ibd' OS error: 82
+2024-06-05T02:20:56.313864Z 12 [Warning] [MY-012049] [InnoDB] Cannot calculate statistics for table `eims`.`user` because the .ibd file is missing. Please refer to http://dev.mysql.com/doc/refman/8.0/en/innodb-troubleshooting.html for how to resolve the issue.
+2024-06-05T02:33:42.491941Z 0 [System] [MY-013105] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Normal shutdown.
+2024-06-05T02:33:44.141918Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.36)  MySQL Community Server - GPL.
+2024-06-05T09:28:00.311329Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.36) starting as process 5588
+2024-06-05T09:28:00.485188Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-06-05T09:28:07.133143Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-06-05T09:28:07.592721Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 22, name 'eims/client', file '.\eims\client.ibd' is missing!
+2024-06-05T09:28:07.595902Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 23, name 'eims/contact', file '.\eims\contact.ibd' is missing!
+2024-06-05T09:28:07.598747Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 24, name 'eims/cs', file '.\eims\cs.ibd' is missing!
+2024-06-05T09:28:07.601340Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 25, name 'eims/product', file '.\eims\product.ibd' is missing!
+2024-06-05T09:28:07.603523Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 26, name 'eims/staff', file '.\eims\staff.ibd' is missing!
+2024-06-05T09:28:07.605550Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 27, name 'eims/user', file '.\eims\user.ibd' is missing!
+2024-06-05T09:28:08.073880Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2024-06-05T09:28:08.075412Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2024-06-05T09:28:08.476504Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2024-06-05T09:28:08.476958Z 0 [System] [MY-010931] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: ready for connections. Version: '8.0.36'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2024-06-06T02:37:00.734409Z 0 [System] [MY-013105] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Normal shutdown.
+2024-06-06T02:37:02.188362Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.36)  MySQL Community Server - GPL.
+2024-06-07T05:46:41.552391Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.36) starting as process 17888
+2024-06-07T05:46:41.721110Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-06-07T05:46:48.420972Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-06-07T05:46:48.941325Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 22, name 'eims/client', file '.\eims\client.ibd' is missing!
+2024-06-07T05:46:48.943124Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 23, name 'eims/contact', file '.\eims\contact.ibd' is missing!
+2024-06-07T05:46:48.944569Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 24, name 'eims/cs', file '.\eims\cs.ibd' is missing!
+2024-06-07T05:46:48.945856Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 25, name 'eims/product', file '.\eims\product.ibd' is missing!
+2024-06-07T05:46:48.947107Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 26, name 'eims/staff', file '.\eims\staff.ibd' is missing!
+2024-06-07T05:46:48.948346Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 27, name 'eims/user', file '.\eims\user.ibd' is missing!
+2024-06-07T05:46:49.382837Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2024-06-07T05:46:49.384717Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2024-06-07T05:46:49.947410Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2024-06-07T05:46:49.947826Z 0 [System] [MY-010931] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: ready for connections. Version: '8.0.36'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2024-06-07T05:47:13.841110Z 0 [System] [MY-013105] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Normal shutdown.
+2024-06-07T05:47:14.609043Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.36)  MySQL Community Server - GPL.
