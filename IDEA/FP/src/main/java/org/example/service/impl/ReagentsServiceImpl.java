@@ -22,10 +22,11 @@ public class ReagentsServiceImpl implements ReagentsService
     }
 
     @Override
-    public int updateReagents(Reagents r)throws Exception
+    public int updateReagents(char[] rId, char[] rUser, boolean rUsed) throws Exception
     {
-        return reagentsMapper.updateReagents(r);
+        return reagentsMapper.updateReagents(rId,rUser,rUsed);
     }
+
 
     @Override
     public List<Reagents> selectReagents(char[] rId)throws Exception
@@ -45,6 +46,7 @@ public class ReagentsServiceImpl implements ReagentsService
         r.setRid(rId.toCharArray());
         r.setrFactory(rFactory.toCharArray());
         r.setrDate(new java.util.Date());
+        r.setIsUsed(false);
         return reagentsMapper.insertReagents(r);
     }
 

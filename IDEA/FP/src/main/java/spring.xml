@@ -5,8 +5,6 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
    <bean id="factoryService" class="org.example.service.impl.FactoryServiceImpl"/>
-   <bean id="reagentsInputListService" class="org.example.service.impl.ReagentsInputListServiceImpl"/>
-   <bean id="reagentsOutputListService" class="org.example.service.impl.ReagentsOutputListServiceImpl"/>
    <bean id="reagentsService" class="org.example.service.impl.ReagentsServiceImpl"/>
    <bean id="userService" class="org.example.service.impl.UserServiceImpl"/>
 

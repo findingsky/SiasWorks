@@ -83,3 +83,16 @@
 2024-06-07T05:55:24.864740Z 0 [System] [MY-010931] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: ready for connections. Version: '8.0.36'  socket: ''  port: 3306  MySQL Community Server - GPL.
 2024-06-07T16:28:55.948657Z 0 [System] [MY-013105] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Normal shutdown.
 2024-06-07T16:28:56.867186Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.36)  MySQL Community Server - GPL.
+2024-06-11T07:27:35.958050Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.36) starting as process 14420
+2024-06-11T07:27:36.140600Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-06-11T07:27:43.397551Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-06-11T07:27:44.005699Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 22, name 'eims/client', file '.\eims\client.ibd' is missing!
+2024-06-11T07:27:44.011462Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 23, name 'eims/contact', file '.\eims\contact.ibd' is missing!
+2024-06-11T07:27:44.016908Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 24, name 'eims/cs', file '.\eims\cs.ibd' is missing!
+2024-06-11T07:27:44.021711Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 25, name 'eims/product', file '.\eims\product.ibd' is missing!
+2024-06-11T07:27:44.026847Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 26, name 'eims/staff', file '.\eims\staff.ibd' is missing!
+2024-06-11T07:27:44.032142Z 1 [Warning] [MY-012351] [InnoDB] Tablespace 27, name 'eims/user', file '.\eims\user.ibd' is missing!
+2024-06-11T07:27:45.209937Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2024-06-11T07:27:45.212517Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2024-06-11T07:27:45.419337Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2024-06-11T07:27:45.419696Z 0 [System] [MY-010931] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: ready for connections. Version: '8.0.36'  socket: ''  port: 3306  MySQL Community Server - GPL.

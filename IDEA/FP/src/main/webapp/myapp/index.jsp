@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>核酸检测系统主页</title>
+    <title>我的主页</title>
     <style>
         body {
             font-family: Arial, sans-serif;

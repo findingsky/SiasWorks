@@ -11,7 +11,7 @@ public interface ReagentsService
     int deleteReagents(char[] rId)throws Exception;
 
     // 更新试剂
-    int updateReagents(Reagents r)throws Exception;
+    int updateReagents(char[] rId,char[] rUser,boolean rUsed)throws Exception;
 
     // 查询试剂
     List<Reagents> selectReagents(char[] rId)throws Exception;
