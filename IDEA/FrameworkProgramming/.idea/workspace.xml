@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="16a15458-8e01-4155-b71c-5c2f685c0d41" name="更改" comment="添加service">
+      <change beforePath="$PROJECT_DIR$/../Kotlin1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Kotlin1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../myfirstapp/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../myfirstapp/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../myfirstapp/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/bin/manage/DatabaseManage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/image/Sunset.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/lib/mysql-connector-java-5.1.6-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/myfirstapp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/src/bean/StudentBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/src/db/Database1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/src/manage/DatabaseManage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/src/sias1/MyFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/src/sias1/MyFrame2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/src/sias1/MyFrame3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/src/sias1/MySQLJDBCConnectionDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/src/sias1/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myfirstapp/src/sias1/StudentView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL80/Data/#ib_16384_0.dblwr" beforeDir="false" afterPath="$PROJECT_DIR$/../../MySQL80/Data/#ib_16384_0.dblwr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL80/Data/#innodb_redo/#ib_redo12" beforeDir="false" afterPath="$PROJECT_DIR$/../../MySQL80/Data/#innodb_redo/#ib_redo12" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL80/Data/REONA_PROART-bin.000001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL80/Data/REONA_PROART-bin.index" beforeDir="false" afterPath="$PROJECT_DIR$/../../MySQL80/Data/REONA_PROART-bin.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL80/Data/REONA_PROART-slow.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../MySQL80/Data/REONA_PROART-slow.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL80/Data/REONA_PROART.err" beforeDir="false" afterPath="$PROJECT_DIR$/../../MySQL80/Data/REONA_PROART.err" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL80/Data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/../../MySQL80/Data/ib_buffer_pool" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL80/Data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/../../MySQL80/Data/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL80/Data/mysql.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/../../MySQL80/Data/mysql.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL80/Data/undo_001" beforeDir="false" afterPath="$PROJECT_DIR$/../../MySQL80/Data/undo_001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MySQL80/Data/undo_002" beforeDir="false" afterPath="$PROJECT_DIR$/../../MySQL80/Data/undo_002" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ououio&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ououio/SiasWorks.git&quot;,
+    &quot;accountId&quot;: &quot;09e8c795-1d16-41c0-a1c3-d53d33f03ac9&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2ezSpmRpy2DVq1NLS8bkrXqGsAn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/SiasWorks/IDEA/Kotlin1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="16a15458-8e01-4155-b71c-5c2f685c0d41" name="更改" comment="" />
+      <created>1712906098471</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712906098471</updated>
+      <workItem from="1712906099527" duration="74000" />
+      <workItem from="1712906724638" duration="11000" />
+      <workItem from="1712906767422" duration="121000" />
+      <workItem from="1712906900759" duration="106000" />
+      <workItem from="1713264309621" duration="145000" />
+      <workItem from="1713272333420" duration="2223000" />
+      <workItem from="1713796662970" duration="143000" />
+      <workItem from="1715095762138" duration="43000" />
+      <workItem from="1716634162331" duration="161000" />
+      <workItem from="1716634337676" duration="2081000" />
+      <workItem from="1716711019949" duration="13000" />
+      <workItem from="1716896243814" duration="374000" />
+      <workItem from="1716906045335" duration="16000" />
+      <workItem from="1717069813557" duration="25000" />
+    </task>
+    <task id="LOCAL-00001" summary="Generating...">
+      <option name="closed" value="true" />
+      <created>1712906982298</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712906982298</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Generating...">
+      <option name="closed" value="true" />
+      <created>1713272908842</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713272908842</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Generating...">
+      <option name="closed" value="true" />
+      <created>1713273777183</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713273777183</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Generating...">
+      <option name="closed" value="true" />
+      <created>1713273799268</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713273799268</updated>
+    </task>
+    <task id="LOCAL-00005" summary="根据以上git diff信息生成一行commit message：&#10;&#10;更新了mapper文件，添加了新的查询语句。">
+      <option name="closed" value="true" />
+      <created>1713273922163</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713273922163</updated>
+    </task>
+    <task id="LOCAL-00006" summary="根据以上git diff信息生成一行commit message：&#10;&#10;更新了mapper文件，添加了新的查询语句。">
+      <option name="closed" value="true" />
+      <created>1713274551113</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713274551113</updated>
+    </task>
+    <task id="LOCAL-00007" summary="添加service">
+      <option name="closed" value="true" />
+      <created>1716635238983</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716635238983</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Generating..." />
+    <MESSAGE value="根据以上git diff信息生成一行commit message：&#10;&#10;更新了mapper文件，添加了新的查询语句。" />
+    <MESSAGE value="添加service" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加service" />
+  </component>
+</project>

@@ -29,20 +29,8 @@
                 <td><input type="text" name="rId" required></td>
             </tr>
             <tr>
-                <th>试剂名称</th>
-                <td><input type="text" name="rName" required></td>
-            </tr>
-            <tr>
-                <th>试剂类型</th>
-                <td><input type="text" name="rType" required></td>
-            </tr>
-            <tr>
                 <th>试剂生产厂商</th>
                 <td><input type="text" name="rFactory" required></td>
-            </tr>
-            <tr>
-                <th>试剂库存</th>
-                <td><input type="number" name="rStock" required></td>
             </tr>
             <tr>
                 <td colspan="2" align="center">

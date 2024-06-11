@@ -29,16 +29,12 @@
                 <td><input type="text" name="riId" required></td>
             </tr>
             <tr>
-                <th>出库数量</th>
-                <td><input type="number" name="outputNumber" required></td>
-            </tr>
-            <tr>
                 <th>出库时间</th>
                 <td><input type="datetime-local" name="outputTime" required></td>
             </tr>
             <tr>
-                <th>操作人</th>
-                <td><input type="text" name="operator" required></td>
+                <th>出库方式</th>
+                <td><input type="text" name="outputType" required></td>
             </tr>
             <tr>
                 <td colspan="2" align="center">
