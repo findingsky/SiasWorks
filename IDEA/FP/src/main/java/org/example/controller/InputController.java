@@ -15,8 +15,8 @@ public class InputController
 {
     private ReagentsService reagentsService;
 
-    @GetMapping(value = "/reagents")
-    public void reagentsInputList(@RequestBody String rId,String rFactory)
+    @GetMapping(value = "/input")
+    public void reagentsInput(@RequestBody String rId,String rFactory)
     {
         reagentsService.insertReagents(rId,rFactory);
     }

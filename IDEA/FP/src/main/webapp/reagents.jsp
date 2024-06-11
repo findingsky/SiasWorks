@@ -1,41 +1,29 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="org.example.pojo.Reagents" %>
+<%@ page import="org.example.service.ReagentsService" %>
+<%@ page import="org.springframework.stereotype.Controller" %>
+<%@ page import="org.springframework.web.bind.annotation.RequestMapping" %>
+<%@ page import="org.springframework.web.servlet.ModelAndView" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>核酸检测试剂操作</title>
-<style>
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
-    th, td {
-        border: 1px solid black;
-        padding: 8px;
-        text-align: left;
-    }
-    th {
-        background-color: #f2f2f2;
-    }
-</style>
+    <title>试剂信息</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>核酸检测试剂操作</h1>
-    <form action="ReagentsServiceImpl" method="post">
-        <table>
+    <h1>试剂信息</h1>
+    <table border="1">
+        <tr>
+            <th>试剂ID</th>
+            <th>试剂工厂</th>
+        </tr>
+        <c:forEach items="${reagents}" var="r">
             <tr>
-                <th>试剂ID</th>
-                <td><input type="text" name="rId" required></td>
+                <td>${r.rId}</td>
+                <td>${r.rFactory}</td>
             </tr>
-            <tr>
-                <th>试剂生产厂商</th>
-                <td><input type="text" name="rFactory" required></td>
-            </tr>
-            <tr>
-                <td colspan="2" align="center">
-                    <input type="submit" value="保存">
-                    <input type="reset" value="重置">
-                </td>
-            </tr>
-
+        </c:forEach>
+    </table>
+</body>
+</html>

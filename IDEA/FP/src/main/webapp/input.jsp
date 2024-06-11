@@ -24,7 +24,7 @@
 </head>
 <body>
 <h1>核酸检测试剂入库单</h1>
-<form action="ReagentsInputListServlet" method="post">
+<form action="../reagents" method="post">
     <table>
         <tr>
             <th>试剂ID</th>

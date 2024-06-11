@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>核酸检测试剂出库</title>
+<title>核酸检测用户操作</title>
 <style>
     table {
         border-collapse: collapse;
@@ -21,20 +21,24 @@
 </style>
 </head>
 <body>
-    <h1>核酸检测试剂出库</h1>
-    <form action="../output" method="post">
+    <h1>核酸检测用户注册</h1>
+    <form action="../userInput" method="post">
         <table>
             <tr>
-                <th>试剂ID</th>
-                <td><input type="text" name="riId" required></td>
+                <th>用户ID</th>
+                <td><input type="text" name="uId" required></td>
             </tr>
             <tr>
-                <th>出库时间</th>
-                <td><input type="datetime-local" name="outputTime" required></td>
+                <th>用户名</th>
+                <td><input type="text" name="username" required></td>
             </tr>
             <tr>
-                <th>出库方式</th>
-                <td><input type="text" name="outputType" required></td>
+                <th>密码</th>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <th>邮箱</th>
+                <td><input type="email" name="email" required></td>
             </tr>
             <tr>
                 <td colspan="2" align="center">
