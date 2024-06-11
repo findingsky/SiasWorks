@@ -12,6 +12,20 @@ public class Reagents
     private char[] rFactory = new char[11];
     // 定义一个char类型的数组，用于存储试剂的使用者
     private char[] rUser = new char[11];
+    // 定义一个Boolean，用于存储试剂是否已被使用
+    private Boolean isUsed;
+
+    // 获取试剂是否已被使用
+    public Boolean getIsUsed()
+    {
+        return isUsed;
+    }
+
+    // 设置试剂是否已被使用
+    public void setIsUsed(Boolean isUsed)
+    {
+        this.isUsed = isUsed;
+    }
 
     // 获取试剂的id
     public char[] getRid()

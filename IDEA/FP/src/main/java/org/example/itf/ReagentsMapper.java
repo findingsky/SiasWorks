@@ -18,14 +18,14 @@ public interface ReagentsMapper
     @Delete("delete from reagents where rId = #{rId}")
     int deleteReagents(@Param("rId") char[] rId);
 
-    @Update("update reagents set rDate=#{rDate}, rFactory=#{rFactory}, rUser=#{rUser} where rFactory=#{rFactory}")
-    int updateReagents(@Param("rId") char[] rId, @Param("rDate") String rDate, @Param("rFactory") String rFactory, @Param("rUser") String rUser);
+    @Update("update reagents set rDate=#{rDate}, rFactory=#{rFactory}, rUser=#{rUser},rUsed=#{rUsed} where rId=#{rId}")
+    int updateReagents(@Param("rId") char[] rId, @Param("rDate") String rDate, @Param("rFactory") String rFactory, @Param("rUser") String rUser,@Param("rUsed")boolean rUsed);
 
     @Select("SELECT * FROM reagents where rId=#{rId}")
     List<Reagents> selectReagents(@Param("rId") char[] rId);
 
-    @Insert("insert into reagents values (#{rId}, #{rDate}, #{rFactory}, #{rUser})")
-    int insertReagents(@Param("rId") char[] rId, @Param("rDate") String rDate, @Param("rFactory") String rFactory, @Param("rUser") String rUser);
+    @Insert("insert into reagents values (#{rId}, #{rDate}, #{rFactory},#{rUser} , #{rUsed})")
+    int insertReagents(@Param("rId") char[] rId, @Param("rDate") String rDate, @Param("rFactory") String rFactory, @Param("rUser") String rUser, @Param("rUsed") boolean rUsed);
 
     @Select("SELECT * FROM reagents")
     List<Reagents> selectAllReagent();
@@ -36,6 +36,6 @@ public interface ReagentsMapper
     @Update("update reagents set rDate=#{rDate}, rFactory=#{rFactory}, rUser=#{rUser} where rFactory=#{rFactory}")
     int updateReagents(Reagents r);
 
-    @Insert("insert into reagents values (#{rId}, #{rDate}, #{rFactory}, #{rUser})")
+    @Insert("insert into reagents values (#{rId}, #{rDate}, #{rFactory}, #{rUser}, #{rUsed})")
     int insertReagents(Reagents r);
 }

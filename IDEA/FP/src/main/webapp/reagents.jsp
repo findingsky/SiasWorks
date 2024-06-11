@@ -17,11 +17,15 @@
         <tr>
             <th>试剂ID</th>
             <th>试剂工厂</th>
+            <th>使用情况</th>
+            <th>试剂生产日期</th>
         </tr>
         <c:forEach items="${reagents}" var="r">
             <tr>
                 <td>${r.rId}</td>
                 <td>${r.rFactory}</td>
+                <td>${r.rUsed}</td>
+                <td>${r.rDate}</td>
             </tr>
         </c:forEach>
     </table>

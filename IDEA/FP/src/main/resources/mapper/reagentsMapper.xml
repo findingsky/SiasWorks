@@ -13,8 +13,9 @@
             rDate=#{rDate},
             rFactory=#{rFactory},
             rUser=#{rUser}
+            rUsed=#{rUsed}
         </trim>
-        where fID=#{fID};
+        where rId=#{rId};
     </update>
     <select id="selectReagents" resultType="org.example.pojo.Reagents">
         SELECT * FROM reagents
@@ -22,7 +23,7 @@
     </select>
     <insert id="insertReagents">
         insert into reagents
-        values (#{rId}, #{rDate}, #{rFactory}, #{rUser});
+        values (#{rId}, #{rDate}, #{rFactory}, #{rUser}, #{rUsed});
     </insert>
     <select id="selectAllReagent" resultType="org.example.pojo.Reagents">
 
