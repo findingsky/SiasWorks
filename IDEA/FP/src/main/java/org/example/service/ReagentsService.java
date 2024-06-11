@@ -19,6 +19,9 @@ public interface ReagentsService
     // 插入试剂
     int insertReagents(Reagents r)throws Exception;
 
+
+    int insertReagents(String rId, String rFactory);
+
     // 查询所有试剂
     List<Reagents> selectAllReagent()throws Exception;
 

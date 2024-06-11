@@ -38,6 +38,15 @@ public class ReagentsServiceImpl implements ReagentsService
     {
         return reagentsMapper.insertReagents(r);
     }
+    @Override
+    public int insertReagents(String rId, String rFactory)
+    {
+        Reagents r=new Reagents();
+        r.setRid(rId.toCharArray());
+        r.setrFactory(rFactory.toCharArray());
+        r.setrDate(new java.util.Date());
+        return reagentsMapper.insertReagents(r);
+    }
 
     @Override
     public List<Reagents> selectAllReagent()throws Exception
